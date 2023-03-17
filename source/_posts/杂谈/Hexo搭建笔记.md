@@ -1,3 +1,12 @@
+---
+title: Hexo搭建笔记
+categories:
+  - 杂谈
+tags:
+  - 笔记
+  - hexo
+date: 2023-03-18 00:18:02
+---
 # 搭建hexo
 
 1. 下载并安装node.js
