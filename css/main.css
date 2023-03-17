@@ -3396,6 +3396,9 @@ details.toc[open] >div.body section .header+.doc_tree {
   color: #ff5724;
   background: var(--card);
 }
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" nav.menu,
+rel="stylesheet"> nav.menu,
+# 不要引入最新的 katex 文件，显示效果和插件并不兼容 nav.menu,
 .l_left nav.menu {
   margin-bottom: 0;
 }
