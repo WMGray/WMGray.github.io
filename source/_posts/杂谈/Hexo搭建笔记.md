@@ -7,7 +7,7 @@ tags:
   - hexo
 date: 2023-03-18 00:18:02
 ---
-## 搭建hexo
+## 搭建hexo 
 
 1. 下载并安装node.js
    - 官网下载：https://nodejs.org/en/

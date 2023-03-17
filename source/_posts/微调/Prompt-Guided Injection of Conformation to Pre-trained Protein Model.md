@@ -3,7 +3,10 @@ title: Prompt-Guided Injection of Conformation to Pre-trained Protein Model
 categories:
   - 微调
 date: 2023-03-17 20:10:39
-tags: 生物 微调 提示学习
+tags: 
+- 生物 
+- 微调 
+- 提示学习
 ---
 ## Prompt-Guided Injection of Conformation to Pre-trained Protein Model
 
