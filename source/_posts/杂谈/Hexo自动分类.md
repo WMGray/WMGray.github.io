@@ -7,11 +7,11 @@ tags:
   - hexo
 date: 2023-03-18 00:17:51
 ---
-# 目的
+## 目的
 
 给每一个笔记自动添加分类（习惯了使用文件夹分类）
 
-# 自动分类
+## 自动分类
 
 1. 使用的是[hexo-auto-category](https://link.zhihu.com/?target=https%3A//github.com/xu-song/hexo-auto-category)这个基于文件夹自动分类的插件，安装：
 
@@ -92,7 +92,7 @@ date: 2023-03-18 00:17:51
 
 
 
-# 参考
+## 参考
 
 - [Obsidian+Git完美维护Hexo博客](https://zhuanlan.zhihu.com/p/554333805)
 - [Hexo + Obsidian + Git 完美的博客部署与编辑方案](https://segmentfault.com/a/1190000042111566)

@@ -107,7 +107,7 @@ tags: 生物 微调 提示学习
 
      > 假设prompt对输入序列$S_{in}$施加的影响不受prompt位置的干扰
 
-     - $S_{in}$ Embedding：	$\\mathbf X_{in} = E(S_{in}) $  
+     - $S_{in}$ Embedding：	$\mathbf X_{in} = E(S_{in}) $  
      - $S_{pt}$Embedding：    $\mathbf X_{pt} = E_{tok}(S_{pt}) = {E_{tok}(s^1_{pt}), . . . , E_{tok}(s^m_{pt})}$
 
      完整输入： $\mathbf X_{prompt} = \mathbf X_{in} || \mathbf X_{pt}$

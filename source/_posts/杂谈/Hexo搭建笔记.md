@@ -7,7 +7,7 @@ tags:
   - hexo
 date: 2023-03-18 00:18:02
 ---
-# 搭建hexo
+## 搭建hexo
 
 1. 下载并安装node.js
    - 官网下载：https://nodejs.org/en/
@@ -19,7 +19,7 @@ date: 2023-03-18 00:18:02
 
 3. 命令行安装hexo
 
-   - 命令：cnpm install -g hexo-cli
+   - 命令npm install -g hexo-cli
 
    - 验证：hexo -v
 
@@ -55,7 +55,7 @@ npm install
 
 
 
-# Github + Hexo
+## Github + Hexo
 
 1. 新建一个仓库，名为`用户名.github.io`
 
@@ -104,7 +104,7 @@ npm install
 
    > 右上Setting --> Pages --> Branch -->选择gh-pages -->save
 
-# 手动部署
+## 手动部署
 
 - 命令：
 
@@ -118,9 +118,9 @@ npm install
 
   > 需要注意的是：`hexo deploy` 命令并不会帮助我们同步本地的修改到远程仓库，所以当在本地写完博文之后，要做两件事：一是发布站点，二是同步远程仓库，这样做比较麻烦，下面会讲解如何配置`持续集成`
 
-# 自动部署--Github Actions
+## 自动部署--Github Actions
 
-## 1. 设置 SSH 私钥 `deploy_key`
+### 1. 设置 SSH 私钥 `deploy_key`
 
 创建 SSH 部署密钥(使用git bash)
 
@@ -150,7 +150,7 @@ ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 
 - 不要上传私钥！！！
 
-## 2. 新建 .github/workflows/pages.yml 文件
+### 2. 新建 .github/workflows/pages.yml 文件
 
 文件内容如下：
 
@@ -230,7 +230,7 @@ jobs:
 
 ```
 
-## 3. 修改 `_config.yml` 文件中的`Deploy`配置
+### 3. 修改 `_config.yml` 文件中的`Deploy`配置
 
 ```
 # Deployment
@@ -249,7 +249,7 @@ deploy:
 
 
 
-# 参考
+## 参考
 
 - [Hexo+GitHub搭建个人博客，实现云端编辑、一键发文](https://www.cnblogs.com/all-smile/p/16608503.html)
 - [hexo](https://hexo.io/docs/)
