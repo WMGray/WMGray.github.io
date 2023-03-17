@@ -23,15 +23,15 @@
   <title>Hexo搭建笔记 - Hexo</title>
 
   
-    <meta name="description" content="搭建hexo   下载并安装node.js  官网下载：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; 验证：node -v    命令行安装cnpm  命令：npm install -g cnpm --registry&#x3D;&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org 验证：cnpm -v    命令行安装hexo   命令：cnpm install -g hexo-cli">
+    <meta name="description" content="搭建hexo   下载并安装node.js  官网下载：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; 验证：node -v    命令行安装cnpm  命令：npm install -g cnpm --registry&#x3D;&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org 验证：cnpm -v    命令行安装hexo   命令：cnpm install -g hexo-cli   验">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo搭建笔记">
 <meta property="og:url" content="https://wmgray.github.io/2023/03/83f5e002c6f9.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="搭建hexo   下载并安装node.js  官网下载：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; 验证：node -v    命令行安装cnpm  命令：npm install -g cnpm --registry&#x3D;&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org 验证：cnpm -v    命令行安装hexo   命令：cnpm install -g hexo-cli">
+<meta property="og:description" content="搭建hexo   下载并安装node.js  官网下载：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; 验证：node -v    命令行安装cnpm  命令：npm install -g cnpm --registry&#x3D;&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org 验证：cnpm -v    命令行安装hexo   命令：cnpm install -g hexo-cli   验">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-18T00:18:02.000Z">
-<meta property="article:modified_time" content="2023-03-17T17:13:24.340Z">
+<meta property="article:modified_time" content="2023-03-17T17:51:03.104Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="hexo">
@@ -64,7 +64,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --></head>
+<!-- hexo injector head_end end --><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
 
 <body>
   
@@ -88,7 +88,7 @@
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div></div></widget>
 
 
-<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Hexo搭建笔记</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%AE%BE%E7%BD%AE-ssh-%E7%A7%81%E9%92%A5-deploy_key"><span class="toc-text"> 1. 设置 SSH 私钥 deploy_key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%B0%E5%BB%BA-githubworkflowspagesyml-%E6%96%87%E4%BB%B6"><span class="toc-text"> 2. 新建 .github&#x2F;workflows&#x2F;pages.yml 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BF%AE%E6%94%B9-_configyml-%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84deploy%E9%85%8D%E7%BD%AE"><span class="toc-text"> 3. 修改 _config.yml 文件中的Deploy配置</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Hexo搭建笔记</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%AE%BE%E7%BD%AE-ssh-%E7%A7%81%E9%92%A5-deploy-key"><span class="toc-text">1. 设置 SSH 私钥 deploy_key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%B0%E5%BB%BA-github-workflows-pages-yml-%E6%96%87%E4%BB%B6"><span class="toc-text">2. 新建 .github&#x2F;workflows&#x2F;pages.yml 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BF%AE%E6%94%B9-config-yml-%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84deploy%E9%85%8D%E7%BD%AE"><span class="toc-text">3. 修改 _config.yml 文件中的Deploy配置</span></a></li></ol></div></div></widget>
 
 
 
@@ -107,7 +107,7 @@
 
 <article class='md-text content post'>
 <h1 class="article-title"><span>Hexo搭建笔记</span></h1>
-<h1 id="搭建hexo"><a class="markdownIt-Anchor" href="#搭建hexo"></a> 搭建hexo</h1>
+<h1 id="搭建hexo">搭建hexo</h1>
 <ol>
 <li>
 <p>下载并安装node.js</p>
@@ -119,7 +119,7 @@
 <li>
 <p>命令行安装cnpm</p>
 <ul>
-<li>命令：npm install -g cnpm --registry==<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a></li>
+<li>命令：npm install -g cnpm --registry==https://registry.npm.taobao.org</li>
 <li>验证：cnpm -v</li>
 </ul>
 </li>
@@ -153,7 +153,7 @@
 </blockquote>
 </li>
 </ol>
-<h1 id="github-hexo"><a class="markdownIt-Anchor" href="#github-hexo"></a> Github + Hexo</h1>
+<h1 id="github-hexo">Github + Hexo</h1>
 <ol>
 <li>
 <p>新建一个仓库，名为<code>用户名.github.io</code></p>
@@ -176,9 +176,9 @@
 <blockquote>
 <p>url: <a target="_blank" rel="noopener" href="https://all-smile.github.io/blog">https://all-smile.github.io/blog</a></p>
 <p>root: /blog/</p>
-<p>...</p>
+<p>…</p>
 <p>deploy:</p>
-<p>​	type: 'git'</p>
+<p>​	type: ‘git’</p>
 <p>​	repo: <a href="mailto:git@github.com">git@github.com</a>:all-smile/blog.git  #这个是你的仓库的ssh</p>
 <p>​	branch: gh-pages	# 要部署的分支，本教程博客源码在master分支，部署在gh-pages分支</p>
 </blockquote>
@@ -201,7 +201,7 @@
 </blockquote>
 </li>
 </ol>
-<h1 id="手动部署"><a class="markdownIt-Anchor" href="#手动部署"></a> 手动部署</h1>
+<h1 id="手动部署">手动部署</h1>
 <ul>
 <li>
 <p>命令：</p>
@@ -212,8 +212,8 @@
 </blockquote>
 </li>
 </ul>
-<h1 id="自动部署-github-actions"><a class="markdownIt-Anchor" href="#自动部署-github-actions"></a> 自动部署--Github Actions</h1>
-<h2 id="1-设置-ssh-私钥-deploy_key"><a class="markdownIt-Anchor" href="#1-设置-ssh-私钥-deploy_key"></a> 1. 设置 SSH 私钥 <code>deploy_key</code></h2>
+<h1 id="自动部署-github-actions">自动部署–Github Actions</h1>
+<h2 id="1-设置-ssh-私钥-deploy-key">1. 设置 SSH 私钥 <code>deploy_key</code></h2>
 <p>创建 SSH 部署密钥(使用git bash)</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;$(git config user.email)&quot; -f gh-pages -N &quot;&quot;</span><br></pre></td></tr></table></figure>
 <p>您将获得 2 个文件：</p>
@@ -247,13 +247,13 @@
 <p>不要上传私钥！！！</p>
 </li>
 </ul>
-<h2 id="2-新建-githubworkflowspagesyml-文件"><a class="markdownIt-Anchor" href="#2-新建-githubworkflowspagesyml-文件"></a> 2. 新建 .github/workflows/pages.yml 文件</h2>
+<h2 id="2-新建-github-workflows-pages-yml-文件">2. 新建 .github/workflows/pages.yml 文件</h2>
 <p>文件内容如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">name: Pages</span><br><span class="line"></span><br><span class="line"># 触发器、分支</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - master  # default branch</span><br><span class="line">jobs:</span><br><span class="line">  # 子任务</span><br><span class="line">  pages:</span><br><span class="line">    runs-on: ubuntu-latest # 定运行所需要的虚拟机环境</span><br><span class="line">    permissions:</span><br><span class="line">      contents: write</span><br><span class="line">    steps:</span><br><span class="line">      - uses: actions/checkout@v2</span><br><span class="line">        # with:</span><br><span class="line">        #   submodules: true</span><br><span class="line">        #   fetch-depth: 0</span><br><span class="line">      # 每个name表示一个步骤:step</span><br><span class="line">      - name: Use Node.js 16.x</span><br><span class="line">        uses: actions/setup-node@v2</span><br><span class="line">        with:</span><br><span class="line">          node-version: &#x27;16.14.1&#x27; # 自己正在使用的node版本即可</span><br><span class="line">      # - run: node -v # 查看node版本号</span><br><span class="line">      # 缓存依赖项: https://docs.github.com/cn/actions/using-workflows/caching-dependencies-to-speed-up-workflows</span><br><span class="line">      - name: Cache NPM dependencies</span><br><span class="line">        uses: actions/cache@v2</span><br><span class="line">        with:</span><br><span class="line">          # npm cache files are stored in `~/.npm` on Linux/macOS</span><br><span class="line">          path: ~/.npm</span><br><span class="line">          # path: node_modules</span><br><span class="line">          key: $&#123;&#123; runner.OS &#125;&#125;-npm-cache</span><br><span class="line">          restore-keys: |</span><br><span class="line">            $&#123;&#123; runner.OS &#125;&#125;-npm-cache</span><br><span class="line">      # 查看路径 : /home/runner/work/blog/blog</span><br><span class="line">      # - name: Look Path</span><br><span class="line">      #   run: pwd</span><br><span class="line">      # 查看文件</span><br><span class="line">      - name: Look Dir List</span><br><span class="line">        run: tree -L 3 -a</span><br><span class="line">      # 第一次或者依赖发生变化的时候执行 Install Dependencies，其它构建的时候不需要这一步</span><br><span class="line">      - name: Install Dependencies</span><br><span class="line">        run: npm install</span><br><span class="line">      - name: Look Dir List</span><br><span class="line">        run: tree -L 3 -a</span><br><span class="line">      # - name: clean theme cache</span><br><span class="line">      #   run: git rm -f --cached themes/tenacity</span><br><span class="line">        # run: git submodule deinit themes/tenacity &amp;&amp; git rm themes/tenacity</span><br><span class="line">      # 安装主题</span><br><span class="line">      - name: Install Theme</span><br><span class="line">        run: git submodule add https://github.com/all-smile/tenacity.git themes/tenacity</span><br><span class="line">      - name: Clean</span><br><span class="line">        run: npm run clean</span><br><span class="line">      - name: Build</span><br><span class="line">        run: npm run build</span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: peaceiris/actions-gh-pages@v3</span><br><span class="line">        with:</span><br><span class="line">          deploy_key: $&#123;&#123; secrets.ACTIONS_DEPLOY_KEY  &#125;&#125;</span><br><span class="line">          user_name: xxxx	# 需要修改</span><br><span class="line">          user_email: xx@xx.com	#需要修改</span><br><span class="line">          # 获取提交文章源码时的commit message，作为发布gh-pages分支的信息</span><br><span class="line">          commit_message: $&#123;&#123; github.event.head_commit.message &#125;&#125;</span><br><span class="line">          full_commit_message: $&#123;&#123; github.event.head_commit.message &#125;&#125;</span><br><span class="line">          github_token: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</span><br><span class="line">          # GITHUB_TOKEN不是个人访问令牌，GitHub Actions 运行器会自动创建一个GITHUB_TOKEN密钥以在您的工作流程中进行身份验证。因此，您无需任何配置即可立即开始部​​署</span><br><span class="line">          publish_dir: ./public</span><br><span class="line">          allow_empty_commit: true # 允许空提交</span><br><span class="line">      # Use the output from the `deploy` step(use for test action)</span><br><span class="line">      - name: Get the output</span><br><span class="line">        run: |</span><br><span class="line">          echo &quot;$&#123;&#123; steps.deploy.outputs.notify &#125;&#125;&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="3-修改-_configyml-文件中的deploy配置"><a class="markdownIt-Anchor" href="#3-修改-_configyml-文件中的deploy配置"></a> 3. 修改 <code>_config.yml</code> 文件中的<code>Deploy</code>配置</h2>
+<h2 id="3-修改-config-yml-文件中的deploy配置">3. 修改 <code>_config.yml</code> 文件中的<code>Deploy</code>配置</h2>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repo: .......</span><br><span class="line">  branch: gh-pages</span><br><span class="line">  # 默认提交信息： Site updated: &#123;&#123; now(&#x27;YYYY-MM-DD HH:mm:ss&#x27;) &#125;&#125;</span><br><span class="line">  message: $&#123;&#123; github.event.head_commit.message &#125;&#125; # 直接将提交消息传输到 GitHub Pages 存储库</span><br></pre></td></tr></table></figure>
 <p>上传blog时记得切换回<code>master</code>分支</p>
-<h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1>
+<h1 id="参考">参考</h1>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/all-smile/p/16608503.html">Hexo+GitHub搭建个人博客，实现云端编辑、一键发文</a></li>
 <li><a target="_blank" rel="noopener" href="https://hexo.io/docs/">hexo</a></li>
@@ -276,7 +276,7 @@
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br />
 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 
