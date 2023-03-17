@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/杂谈/Hexo自动分类.md",
+                "file": "source/_posts/微调/Prompt-Guided Injection of Conformation to Pre-trained Protein Model.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/杂谈/Hexo自动分类.md",
+                "file": "source/_posts/微调/Prompt-Guided Injection of Conformation to Pre-trained Protein Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/杂谈/Hexo自动分类.md",
+                "file": "source/_posts/微调/Prompt-Guided Injection of Conformation to Pre-trained Protein Model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/杂谈/Hexo自动分类.md"
+                "file": "source/_posts/微调/Prompt-Guided Injection of Conformation to Pre-trained Protein Model.md"
               }
             }
           }
@@ -148,8 +148,43 @@
   },
   "active": "13d46534ce8cf5dc",
   "lastOpenFiles": [
-    "source/_posts/杂谈/Hexo搭建笔记.md",
+    "source/_posts/hello-world.md",
+    "db.json",
+    "public/2023/03/9a286a026640.html",
+    "public/2023/03/e9686152fc0f.html",
+    "public/2023/03/69541b342fad.html",
+    "public/tags/hexo/index.html",
+    "public/tags/hexo",
+    "public/categories/杂谈/index.html",
+    "public/categories/杂谈",
+    "public/tags/笔记/index.html",
+    "public/tags/笔记",
+    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/README.md",
+    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/contrib/mhchem/README.md",
+    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/contrib/mathtex-script-type/README.md",
+    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/contrib/auto-render/README.md",
+    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/contrib/copy-tex/README.md",
+    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/dist/README.md",
+    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/src/metrics/README.md",
+    "node_modules/@abreto/markdown-it-katex/README.md",
+    "node_modules/hexo-renderer-markdown-it-katex/README.md",
+    "node_modules/sluggo/logos/logo-box-madefor.png",
+    "node_modules/sluggo/logos/logo-box-builtby.png",
+    "node_modules/sluggo/README.md",
+    "node_modules/@abreto/markdown-it-katex/node_modules/katex/dist/README.md",
+    "node_modules/@abreto/markdown-it-katex/node_modules/katex/README.md",
+    "node_modules/linkify-it/README.md",
+    "node_modules/markdown-it-container/README.md",
+    "node_modules/linkify-it/CHANGELOG.md",
+    "node_modules/markdown-it/CHANGELOG.md",
+    "node_modules/markdown-it-deflist/README.md",
+    "node_modules/hexo-renderer-markdown-it/node_modules/hexo-util/README.md",
+    "node_modules/hexo-renderer-markdown-it/node_modules/entities/readme.md",
+    "node_modules/hexo-renderer-markdown-it/node_modules/domutils/readme.md",
+    "node_modules/hexo-renderer-markdown-it/README.md",
+    "node_modules/eastasianwidth/README.md",
+    "source/_posts/微调/Prompt-Guided Injection of Conformation to Pre-trained Protein Model.md",
     "source/_posts/杂谈/Hexo自动分类.md",
-    "source/_obsidian/template.md"
+    "source/_posts/杂谈/Hexo搭建笔记.md"
   ]
 }
