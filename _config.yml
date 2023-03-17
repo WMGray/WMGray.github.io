@@ -12,6 +12,24 @@ language: en
 timezone: ''
 
 
+markdown:
+  preset: 'default'
+  render:
+    html: true
+    xhtmlOut: true
+    breaks: true
+    langPrefix: 'language-'
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - 'markdown-it-footnote'
+    - 'markdown-it-ins'
+    - 'markdown-it-mark'
+    - 'markdown-it-sub'
+    - 'markdown-it-sup'
+
+
 # Generate categories from directory-tree
 # Dependencies: https://github.com/xu-song/hexo-auto-category
 # depth: the max_depth of directory-tree you want to generate, should > 0
