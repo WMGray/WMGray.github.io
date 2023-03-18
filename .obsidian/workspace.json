@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "426f9bed46d34dae",
+    "id": "207913c4db094a2d",
     "type": "split",
     "children": [
       {
-        "id": "672531440c36f52c",
+        "id": "276bd63eeb5677d3",
         "type": "tabs",
         "children": [
           {
-            "id": "13d46534ce8cf5dc",
+            "id": "8bb77b3699159543",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fdce09664ba89362",
+    "id": "d6a8b8ca88bef405",
     "type": "split",
     "children": [
       {
-        "id": "3e54a6ab284b5239",
+        "id": "17c4e67c71375811",
         "type": "tabs",
         "children": [
           {
-            "id": "103f7a386a4dfd14",
+            "id": "b9f626ebb681fde4",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,22 +43,44 @@
             }
           },
           {
-            "id": "afe306e9ed5e8aae",
+            "id": "cd925bd188a0ba29",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Contact-Distil Boosting Low Homologous Protein Contact Map Prediction by Self-Supervised Distillation",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
             }
           },
           {
-            "id": "08cf58420815fbd1",
+            "id": "13da610735d86ed8",
+            "type": "leaf",
+            "state": {
+              "type": "langr-search-panel",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "05f13f77715f3192",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "036089947043716e",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "a61ac14cac670479",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -69,18 +91,50 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 301.5
   },
   "right": {
-    "id": "253b1d2ba34838bc",
+    "id": "d3789b6bcdf4fc57",
     "type": "split",
     "children": [
       {
-        "id": "e5867c004f10883b",
+        "id": "1dc0acda9f2d36f9",
         "type": "tabs",
+        "dimension": 43.08252427184466,
         "children": [
           {
-            "id": "60bbecee4c101ba2",
+            "id": "61a9083371bde00b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "bc6dd4fc5476d901",
+            "type": "leaf",
+            "state": {
+              "type": "langr-stat",
+              "state": {}
+            }
+          },
+          {
+            "id": "917087f24da7dff7",
+            "type": "leaf",
+            "state": {
+              "type": "langr-learn-panel",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "c474d3b5973328b3",
+        "type": "tabs",
+        "dimension": 25.36407766990292,
+        "children": [
+          {
+            "id": "d8dbef782fca6000",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -97,7 +151,7 @@
             }
           },
           {
-            "id": "5bbfb3450ec474aa",
+            "id": "a5d54f5ea17198b2",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -107,20 +161,27 @@
                 "unlinkedCollapsed": true
               }
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "aaaf2bb5628ffa0d",
+        "type": "tabs",
+        "dimension": 31.55339805825242,
+        "children": [
           {
-            "id": "76dbcc8a819e112a",
+            "id": "b42e948829dd8050",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": false
               }
             }
           },
           {
-            "id": "c47ff9d1136218c0",
+            "id": "17c3a6e3f6ad87be",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -129,12 +190,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 325.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -143,48 +204,63 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-language-learner:打开查词面板": false,
+      "obsidian-language-learner:打开新词面板": false,
+      "obsidian-language-learner:打开统计": false,
+      "obsidian-language-learner:单词列表": false
     }
   },
-  "active": "13d46534ce8cf5dc",
+  "active": "8bb77b3699159543",
   "lastOpenFiles": [
-    "source/_posts/hello-world.md",
-    "db.json",
-    "public/2023/03/9a286a026640.html",
-    "public/2023/03/e9686152fc0f.html",
-    "public/2023/03/69541b342fad.html",
-    "public/tags/hexo/index.html",
-    "public/tags/hexo",
-    "public/categories/杂谈/index.html",
-    "public/categories/杂谈",
-    "public/tags/笔记/index.html",
-    "public/tags/笔记",
-    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/README.md",
-    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/contrib/mhchem/README.md",
-    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/contrib/mathtex-script-type/README.md",
-    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/contrib/auto-render/README.md",
-    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/contrib/copy-tex/README.md",
-    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/dist/README.md",
-    "node_modules/@traptitech/markdown-it-katex/node_modules/katex/src/metrics/README.md",
-    "node_modules/@abreto/markdown-it-katex/README.md",
-    "node_modules/hexo-renderer-markdown-it-katex/README.md",
-    "node_modules/sluggo/logos/logo-box-madefor.png",
-    "node_modules/sluggo/logos/logo-box-builtby.png",
-    "node_modules/sluggo/README.md",
-    "node_modules/@abreto/markdown-it-katex/node_modules/katex/dist/README.md",
-    "node_modules/@abreto/markdown-it-katex/node_modules/katex/README.md",
-    "node_modules/linkify-it/README.md",
-    "node_modules/markdown-it-container/README.md",
-    "node_modules/linkify-it/CHANGELOG.md",
-    "node_modules/markdown-it/CHANGELOG.md",
-    "node_modules/markdown-it-deflist/README.md",
-    "node_modules/hexo-renderer-markdown-it/node_modules/hexo-util/README.md",
-    "node_modules/hexo-renderer-markdown-it/node_modules/entities/readme.md",
-    "node_modules/hexo-renderer-markdown-it/node_modules/domutils/readme.md",
-    "node_modules/hexo-renderer-markdown-it/README.md",
-    "node_modules/eastasianwidth/README.md",
-    "source/_posts/微调/Prompt-Guided Injection of Conformation to Pre-trained Protein Model.md",
-    "source/_posts/杂谈/Hexo自动分类.md",
-    "source/_posts/杂谈/Hexo搭建笔记.md"
+    "生物数据库/CGR.md",
+    "生物数据库/gutMDisorder.md",
+    "论文/PDF/gutMDisorder  a comprehensive database for.pdf",
+    "论文/PDF/未确认 323541.crdownload",
+    "Zero/ICASSP.md",
+    "Zero/images/Pasted image 20230313143206.png",
+    "Zero/images/Pasted image 20230313143148.png",
+    "Zero/images",
+    "生物数据库/HMP.md",
+    "论文/gutSMASH predicts specialized primary  metabolic pathways from the human   gut microbiota.md",
+    "论文/PDF/Clash.for.Windows.Setup.0.20.15.exe",
+    "论文/PDF/未确认 73753.crdownload",
+    "多模态/Multimodal deep learning for biomedical data/Multimodal deep learning for biomedical data.md",
+    "多模态/Multimodal deep learning for biomedical data/~$Multimodal deep learning for biomedical data.pptx",
+    "术语/AutoEncoder.md",
+    "生物数据库/The Inflammatory Bowel Disease Multi'omics Database.md",
+    "论文/概览.md",
+    "生物数据库/Uniprot.md",
+    "论文/Antigen-Specific Antibody Design and Optimization with Diffusion-Based Generative Models for Protein Structures.md",
+    "生物数据库/SAbDab.md",
+    "生物数据库/UniRef50.md",
+    "论文/Exploring evolution-aware & -free protein language models as protein function predictors.md",
+    "论文/Geometric Transformers for Protein Interface Contact Prediction.md",
+    "论文/Integration of Multimodal Data for Breast Cancer Classification Using a Hybrid Deep Learning Method.md",
+    "生物数据库/CARD.md",
+    "生物数据库/SCOPe.md",
+    "生物数据库/PDX.md",
+    "论文/Data integration through heterogeneous ensembles for protein function prediction.md",
+    "生物数据库/DIPS-Plus.md",
+    "论文/Ancestral protein sequence reconstruction using a tree-structured Ornstein-Uhlenbeck variational autoencoder.md",
+    "论文/AlphaFold and Implications for Intrinsically Disordered Proteins.md",
+    "论文/Contact-Distil  Boosting Low Homologous Protein Contact Map Prediction by Self-Supervised Distillation.md",
+    "生物数据库/CFPs.md",
+    "生物数据库/images/Pasted image 20230308212949.png",
+    "论文/未命名.md.nssyncsc",
+    "pptFE73.tmp",
+    "pptB18.tmp",
+    "pptA4B.tmp",
+    "生物数据库/images/Pasted image 20230306115910.png",
+    "生物数据库/images/Pasted image 20230305195843.png",
+    "生物数据库/images/Pasted image 20230305195604.png",
+    "生物数据库/images/Pasted image 20230305114550.png",
+    "生物数据库/images/Pasted image 20230304153141.png",
+    "论文/images/Pasted image 20230303124425.png",
+    "多模态/Multimodal deep learning for biomedical data/images/image-20230227121032164.png",
+    "微调/未命名.canvas",
+    "未命名.canvas"
   ]
 }

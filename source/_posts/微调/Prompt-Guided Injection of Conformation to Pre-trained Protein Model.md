@@ -2,17 +2,12 @@
 title: Prompt-Guided Injection of Conformation to Pre-trained Protein Model
 categories:
   - 微调
-date: 2023-03-17 20:10:39
-tags: 
-- 生物 
-- 微调 
-- 提示学习
+date: 2023-03-18 12:08:44
+tags:
 ---
-## Prompt-Guided Injection of Conformation to Pre-trained Protein Model
 
 [url](https://arxiv.org/pdf/2202.02944.pdf)
-
-> #微调 #生物 #提示学习
+#微调 #生物 #提示学习
 ### Summary
 
 ​		针对目前蛋白质预训练模型生成的embedding固定的问题，提出了一种解决思路：在预训练中引入prompt learning，可以针对不同的下游任务选择不同的prompt，将相关知识注入到模型中以便产生多变的embedding
@@ -88,7 +83,7 @@ tags:
   >
   > 使用prompts避免微调PTLMs，从而提高性能。
 
-  ![image-20221119161432527](images/image-20221119161432527.png)
+  ![image-20221119161432527](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119161432527.png)
 
   ConfProtein 有两个可学习的提示，分别针对**蛋白质本身的特性**和**蛋白质对中的交互构象**。
 
@@ -99,8 +94,7 @@ tags:
 
   1. **Protein Prompt Learning**  [参考](https://www.cnblogs.com/d0main/p/10447853.html)
 
-     > 传统预训练模型 embedding operator:	
-     > $$E(·) = E_{tok}(·) + E_{seg}(·) + E_{pos}(·)， token, segment, position$$
+     > 传统预训练模型embedding operator:	$$E(·) = E_{tok}(·) + E_{seg}(·) + E_{pos}(·)， token, segment, position$$
      >
      > - token embedding 层是要将各个词转换成固定维度的向量。
      > - segment embeddings 区分一个句子对中的两个句子。Segment Embeddings 层只有两种向量表示。前一个向量是把0赋给第一个句子中的各个token, 后一个向量是把1赋给第二个句子中的各个token。
@@ -111,7 +105,7 @@ tags:
      > 假设prompt对输入序列$S_{in}$施加的影响不受prompt位置的干扰
 
      - $S_{in}$ Embedding：	$\mathbf X_{in} = E(S_{in}) $  
-     - $S_{pt}$Embedding：    $\mathbf X_{pt} = E_{tok}(S_{pt}) = {E_{tok}(s^1_{pt}), . . . , E_{tok}(s^m_{pt})}$
+     - $S_{pt}$ Embedding：    $\mathbf X_{pt} = E_{tok}(S_{pt}) = {E_{tok}(s^1_{pt}), . . . , E_{tok}(s^m_{pt})}$
 
      完整输入： $\mathbf X_{prompt} = \mathbf X_{in} || \mathbf X_{pt}$
 
@@ -123,15 +117,17 @@ tags:
      >
      > **<u>为了促进正交性和泛化性，提示之间的信息流也被禁止。</u>**
      >
-     > ![image-20221119163833360](images/image-20221119163833360.png)
+     > ![image-20221119163833360](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119163833360.png)
      >
      > 注意力掩码矩阵M：
      >
-     > ![image-20221119185040723](images/image-20221119185040723.png)
+     > ![image-20221119185040723](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119185040723.png)
      >
      > m -- prompt长度  n -- seq长度
      >
-     > 输出计算：![image-20221119185120462](images/image-20221119185120462.png)
+     > 输出计算：
+     >
+     > ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119185120462.png)
 
      损失函数：
 
@@ -144,10 +140,10 @@ tags:
        $\mathcal L_\tau$是相关任务集合$T$中某一任务$\tau$的损失
 
        > 我们假设一种特定类型的知识，如蛋白质构象，可以从多个相关任务中学习，如蛋白质-蛋白质相互作用和结合亲和性预测。
-
+     
      - $\mathcal L$：       $\mathcal L = \mathcal L_C + \lambda \mathcal L_P $
 
-	  $\lambda$是一个超参数，用于平衡新的损失和旧的损失。（balancing the previous and new losses.）
+    $\lambda$是一个超参数，用于平衡新的损失和旧的损失。（balancing the previous and new losses.）
 
      
 
@@ -161,7 +157,7 @@ tags:
 
   1. 数据集
 
-     ![image-20221211160150526](images/image-20221211160150526.png)
+     ![image-20221211160150526](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211160150526.png)
 
      - 预训练数据集：
 
@@ -278,7 +274,7 @@ tags:
   >
   > 预测任务：PPI预测和抗体-抗原结合亲和力预测
   
-  ![image-20221121162642127](images/image-20221121162642127.png)
+  ![image-20221121162642127](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121162642127.png)
   
   > Seq提示在SAbDab数据集中有更大的影响力，在抗体-抗原结合亲和力的预测中，氨基酸的性质是一个关键因素，可以通过Seq prompt得到
   
@@ -286,7 +282,7 @@ tags:
   
   **解释IC Prompt**
   
-  ![image-20221121170407554](images/image-20221121170407554.png)
+  ![image-20221121170407554](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121170407554.png)
   
   > a.可视化了有和没有IC提示的TAF4蛋白氨基酸的嵌入
   
@@ -298,7 +294,7 @@ tags:
   
   **Prompt对下游任务可能有不利影响**
   
-  ![image-20221211162009825](images/image-20221211162009825.png)
+  ![image-20221211162009825](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211162009825.png)
   
   相同的提示在不同的数据集中对相同的任务产生截然相反的效果，说明使用不适当的知识会产生负面影响。
   
@@ -314,7 +310,7 @@ tags:
   >
   > IC提示可以提供具有IC的蛋白质表示
   
-  ![image-20221121173023233](images/image-20221121173023233.png)
+  ![image-20221121173023233](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121173023233.png)
   
   **提示可以是未知下游任务的知识探测**	Prompts can be knowledge probe for unknown downstream tasks. 
   
@@ -327,7 +323,7 @@ tags:
   
   
   
-  ![image-20221121173029461](images/image-20221121173029461.png)
+  ![image-20221121173029461](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121173029461.png)
 
 
 
@@ -365,10 +361,6 @@ tags:
 
 2. `contact map`：蛋白质接触图使用二元二维[矩阵](https://so.csdn.net/so/search?q=矩阵&spm=1001.2101.3001.7020)表示三维蛋白质结构的所有可能的氨基酸残基对之间的距离。[参考](https://blog.csdn.net/u012325865/article/details/121118617)
 
-   > ![image-20221118162838819](C:\Users\WMGray\AppData\Roaming\Typora\typora-user-images\image-20221118162838819.png)
-   >
-   > CDK1的native conformation 和  interaction conformation
-   
 3. `Prompts`：是由人类设计的离散单词序列或通过反向传播学习的连续向量。
 
 4. `RSCB`术语    [参考](https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/biological-assemblies)
@@ -392,25 +384,17 @@ tags:
 
       - 将[x] 用输入文本代入
 
-        ![image-20221119142911699](C:\Users\WMGray\AppData\Roaming\Typora\typora-user-images\image-20221119142911699.png)
-
    2. **answer construction【Verbalizer】**
 
       对于我们构造的prompt，我们需要知道我们的预测词和我们的label 之间的关系，并且我们也不可能运行z是任意词，这边我们就需要一个映射函数（mapping function）将输出的词与label进行映射。例如我们的这个例子，输出的label 有两个，一个是:smile: ，一个是:worried: ，我们可以限定，如果预测词是`fantastic` 则对应:smile:,如果是 `boring` 则对应:worried:
-
-      ![image-20221119144914527](images/image-20221119144914527.png)
 
    3. **answer prediction【Prediction】**
 
       到了这边我们就只需要选择[合适的预训练语言模型](https://huggingface.co/docs/transformers/model_summary)，然后进行mask slots [z] 的预测。例如下图，得到了结果 `fantastic`, 我们需要将其代入[z] 中。
 
-      ![image-20221119145544233](images/image-20221119145544233.png)
-
    4. **answer-label mapping【Mapping】**
 
       对于得到的 `answer`，我们需要使用 `Verbalizer` 将其映射回原本的label。
-
-      ![image-20221119145633262](images/image-20221119145633262.png)
 
 6. `Knowledge Graph（知识图谱）`：知识图谱（Knowledge Graph）主要是用于描述现实世界中的实体（区别于概念，是指客观世界中的具体实物，如张三，李四等）、概念（人们在认识世界过程中形成的对客观事物的概念化表示，如人、动物等）及事件间的客观关系。知识图谱的构建过程即从非结构化数据（图像等）或半结构化数据（网页等）中抽取信息，构建结构化数据（三元组，实体-属性-关系）的过程。[参考](https://zhuanlan.zhihu.com/p/53753234)
 

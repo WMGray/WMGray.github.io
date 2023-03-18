@@ -1,3 +1,16 @@
 {
-  "accentColor": ""
+  "accentColor": "",
+  "baseFontSize": 18,
+  "interfaceFontFamily": "楷体",
+  "textFontFamily": "楷体",
+  "cssTheme": "Cyber Glow",
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "表格优化",
+    "yaozhuwa@CSS",
+    "supercharged-links-gen",
+    "AnuExtendTheme",
+    "段落首行缩进"
+  ],
+  "translucency": true
 }

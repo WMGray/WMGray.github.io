@@ -1,1 +1,10 @@
-{}
+{
+  "promptDelete": false,
+  "strictLineBreaks": true,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "./images",
+  "readableLineLength": true,
+  "alwaysUpdateLinks": true
+}
