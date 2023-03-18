@@ -2,11 +2,12 @@
 title: Prompt-Guided Injection of Conformation to Pre-trained Protein Model
 categories:
   - 微调
-date: 2023-03-18 12:08:44
-tags:
+tags: [微调, 生物, 提示学习]
+date: 2023-03-18 12:17:42
 ---
-
 [url](https://arxiv.org/pdf/2202.02944.pdf)
+
+
 #微调 #生物 #提示学习
 ### Summary
 
