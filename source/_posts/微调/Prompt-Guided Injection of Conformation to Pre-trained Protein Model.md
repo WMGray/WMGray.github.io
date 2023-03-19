@@ -5,10 +5,7 @@ categories:
 tags: [微调, 生物, 提示学习]
 date: 2023-03-18 12:17:42
 ---
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 [url](https://arxiv.org/pdf/2202.02944.pdf)
 
 
@@ -88,11 +85,7 @@ date: 2023-03-18 12:17:42
   >
   > 使用prompts避免微调PTLMs，从而提高性能。
 
-<<<<<<< Updated upstream
-  ![image-20221119161432527](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119161432527.png)
-=======
   ![1](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119161432527.png)
->>>>>>> Stashed changes
 
   ConfProtein 有两个可学习的提示，分别针对**蛋白质本身的特性**和**蛋白质对中的交互构象**。
 
@@ -100,7 +93,7 @@ date: 2023-03-18 12:17:42
   >
   > 1. **蛋白质本身的属性**可以通过**氨基酸序列**来挖掘，我们利用掩码语言建模（MLM）任务（Devlin et al, 2019）来学习这个提示，称为序列提示（Seq prompt）。
   > 2. 对于存在于相互作用对中的构象，利用**蛋白质相互作用预测(PPI)任务**学习**相互作用构象提示(IC提示)**。
-
+  
   1. **Protein Prompt Learning**  [参考](https://www.cnblogs.com/d0main/p/10447853.html)
 
      > 传统预训练模型embedding operator:	$$E(·) = E_{tok}(·) + E_{seg}(·) + E_{pos}(·)， token, segment, position$$
@@ -108,14 +101,14 @@ date: 2023-03-18 12:17:42
      > - token embedding 层是要将各个词转换成固定维度的向量。
      > - segment embeddings 区分一个句子对中的两个句子。Segment Embeddings 层只有两种向量表示。前一个向量是把0赋给第一个句子中的各个token, 后一个向量是把1赋给第二个句子中的各个token。
      > - position embeddings能够让Bert理解同一个词应该有不同的向量表示
-
+  
      对于Prompt Learning，模型输入有两部分：原始输入序列$S_{in}$ + 提示$S_{pt}$
 
      > 假设prompt对输入序列$S_{in}$施加的影响不受prompt位置的干扰
 
      - $S_{in}$ Embedding：	$\mathbf X_{in} = E(S_{in}) $  
      - $S_{pt}$ Embedding：    $\mathbf X_{pt} = E_{tok}(S_{pt}) = {E_{tok}(s^1_{pt}), . . . , E_{tok}(s^m_{pt})}$
-
+  
      完整输入： $\mathbf X_{prompt} = \mathbf X_{in} || \mathbf X_{pt}$
 
      ​					$||$表示两个向量之间的连接操作
@@ -125,20 +118,11 @@ date: 2023-03-18 12:17:42
      > prompt应该为原始输入序列的表示提供任务相关信息，因此只允许从提示到原始输入的单向信息流
      >
      > **<u>为了促进正交性和泛化性，提示之间的信息流也被禁止。</u>**
-     >
-<<<<<<< Updated upstream
-     > ![image-20221119163833360](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119163833360.png)
-     >
-     > 注意力掩码矩阵M：
-     >
-     > ![image-20221119185040723](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119185040723.png)
-=======
-     > ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119163833360.png)
-     >
+     >![image-20221119163833360](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119163833360.png)
+     > 
      > 注意力掩码矩阵M：
      >
      > ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119185040723.png)
->>>>>>> Stashed changes
      >
      > m -- prompt长度  n -- seq长度
      >
@@ -146,23 +130,25 @@ date: 2023-03-18 12:17:42
      >
      > ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119185120462.png)
 
-     损失函数：
 
-     - $\mathcal L_C$：knowledge conservation objective  $\mathcal L_C = \mathcal L{pr}(h)$   使预训练的模型保存从预训练任务中学习到的知识
+损失函数：
 
-       $\mathcal L_{pr}$为前一任务的损失函数，eg：预训练期间的 MLM 损失函数
+ - $\mathcal L_C$：knowledge conservation objective  $\mathcal L_C = \mathcal L{pr}(h)$   使预训练的模型保存从预训练任务中学习到的知识
 
-     - $\mathcal L_P$：    knowledge injection objective  $\mathcal L_I = \sum_{\tau \in T} α_τ L_τ (h)$   指导预训练模型获取新知识
+   $\mathcal L_{pr}$为前一任务的损失函数，eg：预训练期间的 MLM 损失函数
 
-       $\mathcal L_\tau$是相关任务集合$T$中某一任务$\tau$的损失
+ - $\mathcal L_P$：    knowledge injection objective  $\mathcal L_I = \sum_{\tau \in T} α_τ L_τ (h)$   指导预训练模型获取新知识
 
-       > 我们假设一种特定类型的知识，如蛋白质构象，可以从多个相关任务中学习，如蛋白质-蛋白质相互作用和结合亲和性预测。
-     
-     - $\mathcal L$：       $\mathcal L = \mathcal L_C + \lambda \mathcal L_P $
+   $\mathcal L_\tau$是相关任务集合$T$中某一任务$\tau$的损失
 
-    $\lambda$是一个超参数，用于平衡新的损失和旧的损失。（balancing the previous and new losses.）
+   > 我们假设一种特定类型的知识，如蛋白质构象，可以从多个相关任务中学习，如蛋白质-蛋白质相互作用和结合亲和性预测。
 
-     
+ - $\mathcal L$：       $\mathcal L = \mathcal L_C + \lambda \mathcal L_P $
+
+$\lambda$是一个超参数，用于平衡新的损失和旧的损失。（balancing the previous and new losses.）
+
+
+​     
 
   2. **ConfProtein**
 
@@ -174,36 +160,32 @@ date: 2023-03-18 12:17:42
 
   1. 数据集
 
-<<<<<<< Updated upstream
-     ![image-20221211160150526](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211160150526.png)
-=======
-     ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211160150526.png)
->>>>>>> Stashed changes
+​     ![image-20221211160150526](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211160150526.png)
 
-     - 预训练数据集：
+ - 预训练数据集：
 
-       STRING(Szklarczyk et al., 2019)，包含用于模型预训练的**蛋白质-蛋白质相互作用对**。
+   STRING(Szklarczyk et al., 2019)，包含用于模型预训练的**蛋白质-蛋白质相互作用对**。
 
-       > STRING数据集中的一些相互作用不会形成稳定的构象。为了去除不稳定构象，我们从STRING中选择了物理上唯一的相互作用子集。该子集包含来自14,094个物种的6500万个蛋白质序列和27亿个蛋白质-蛋白质相互作用对。可以定义一个PPI网络，其中一个节点代表一个蛋白质，一条边代表两个相互作用的蛋白质。蛋白质对之间的边缘表明有证据表明它们结合或形成了物理复合体(physical complex)。
+   > STRING数据集中的一些相互作用不会形成稳定的构象。为了去除不稳定构象，我们从STRING中选择了物理上唯一的相互作用子集。该子集包含来自14,094个物种的6500万个蛋白质序列和27亿个蛋白质-蛋白质相互作用对。可以定义一个PPI网络，其中一个节点代表一个蛋白质，一条边代表两个相互作用的蛋白质。蛋白质对之间的边缘表明有证据表明它们结合或形成了物理复合体(physical complex)。
 
-     - 下游数据集：
+ - 下游数据集：
   
-       SHS27k、SHS148k和STRING Homo Sapiens
+   SHS27k、SHS148k和STRING Homo Sapiens
   
-       > Chen等人(2019))基于随机选择的Homo sapiens PPI data创建了SHS27k和SHS148k数据集
-       >
-       > STRING-HomoSapiens：使用所有的数据
+   > Chen等人(2019))基于随机选择的Homo sapiens PPI data创建了SHS27k和SHS148k数据集
+   >
+   > STRING-HomoSapiens：使用所有的数据
   
-       > 使用BFS和DFS分别用于划分SHS27k、SHS148k和STRING Homo Sapiens的训练和评估数据集。
+   > 使用BFS和DFS分别用于划分SHS27k、SHS148k和STRING Homo Sapiens的训练和评估数据集。
   
-       > 利用PPI预测任务来评估IC提示是否可以向PTPM注入构象知识。
+   > 利用PPI预测任务来评估IC提示是否可以向PTPM注入构象知识。
   
-       > 在预训练期间，模型会预测两种蛋白质是否可以相互作用；在下游任务上，除了预测相互作用外，模型还会预测两种蛋白质的相互作用类型
+   > 在预训练期间，模型会预测两种蛋白质是否可以相互作用；在下游任务上，除了预测相互作用外，模型还会预测两种蛋白质的相互作用类型
   
-     - 其他数据集---用于其他任务
+ - 其他数据集---用于其他任务
   
-     - TAPE是一项旨在评估蛋白质模型普适性的基准。该基准涉及三个主要方面：结构预测、远系同源物检测和蛋白质工程。
-  
+ - TAPE是一项旨在评估蛋白质模型普适性的基准。该基准涉及三个主要方面：结构预测、远系同源物检测和蛋白质工程。
+
   2. 数据集的构建
   
      为了将相互作用构象知识注入到 ConfProtein 中，我们构建了一个 PPI 数据集——一个大规模的物理交互网络。我们使用仅具有物理模式的最新 STRING 数据库，这意味着蛋白质对之间的边表明它们结合或形成物理复合体的证据。该数据库共包含来自 14,094 个物种的 6500 万个蛋白质序列和 27 亿个蛋白质-蛋白质相互作用对。
@@ -225,13 +207,13 @@ date: 2023-03-18 12:17:42
   2. 预训练
   
      - 实验环境：
-  
+      
        >Pytorch (Paszke et al., 2019) 
        >
        > Fairseq (Ott et al.,2019)
-  
+      
      - 参数设置：
-  
+      
        > ConfProtein有650M参数，33层，20个注意头。
        >
        > embedding size = 1280
@@ -241,9 +223,9 @@ date: 2023-03-18 12:17:42
        > learning rate = 0.00001 无权值衰减 固定学习率
        >
        > 氨基酸最大长度为2048
-  
+      
      - baseline
-  
+      
        > 非预训练模型
        >
        > DPPI (Hashemifar et al., 2018)、 DNN-PPI (H et al.,2018)、 PIPR (Chen et al., 2019)、GNN-PPI (Chen et al., 2019)  
@@ -251,7 +233,7 @@ date: 2023-03-18 12:17:42
        > 前三个基线使用不同的深度学习架构（CNN、RCNN和LSTM）将氨基酸嵌入转换为蛋白质嵌入，并使用线性分类器预测两种蛋白质是否具有相互作用关系。
        >
        > GNN-PPI利用图形神经网络来关注整个交互图形，并实现SOTA性能。
-  
+      
        >ProtBert(Elnaggar et al., 2021)、OntoProtein和ESM-1b（Rao等人，2021a）是三种预先训练的模型。
        >
        >为了公平比较，我们只使用预训练模型来生成氨基酸嵌入，并将这些嵌入输入GNN-PPI
@@ -268,9 +250,9 @@ date: 2023-03-18 12:17:42
      - 二级结构预测
      - 荧光
      - Stability
-  
+
   ​      
-  
+
 - **结果：**
 
   >1. 使用 Seq Prompt不会损害 PTPM 在序列相关任务上的表现，带有Seq提示的PTPMs只能获得氨基酸序列和相关二级结构的知识，
@@ -295,82 +277,57 @@ date: 2023-03-18 12:17:42
   >
   > 预测任务：PPI预测和抗体-抗原结合亲和力预测
   
-<<<<<<< Updated upstream
+
   ![image-20221121162642127](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121162642127.png)
-=======
-  ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121162642127.png)
->>>>>>> Stashed changes
-  
+
   > Seq提示在SAbDab数据集中有更大的影响力，在抗体-抗原结合亲和力的预测中，氨基酸的性质是一个关键因素，可以通过Seq prompt得到
-  
+
   > IC Prompt在STRING-HomoSapiens数据集中影响力更大，PPI是由蛋白质构象决定的，ConfProtein可以通过IC prompt获得构象知识
-  
+
   **解释IC Prompt**
-  
-<<<<<<< Updated upstream
+
   ![image-20221121170407554](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121170407554.png)
-=======
-  ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121170407554.png)
->>>>>>> Stashed changes
-  
+
   > a.可视化了有和没有IC提示的TAF4蛋白氨基酸的嵌入
-  
+
   > b.一个氨基酸的两次嵌入之间的距离
-  
+
   > c.红色标记距离大于100的嵌入对
-  
+
   > 标记的嵌入都是蛋白质表面的氨基酸，这与与PPI相关的氨基酸几乎都位于蛋白质表面，而不是核心的事实相一致
-  
+
   **Prompt对下游任务可能有不利影响**
-  
-<<<<<<< Updated upstream
+
   ![image-20221211162009825](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211162009825.png)
-=======
-  ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211162009825.png)
->>>>>>> Stashed changes
-  
+
   相同的提示在不同的数据集中对相同的任务产生截然相反的效果，说明使用不适当的知识会产生负面影响。
-  
+
   > ConfProtein在长蛋白质中更有效。这是因为较长的蛋白质序列在不同构象的接触图之间差异较大，需要更多的3D信息才能准确预测接触图。
-  
+
   **Prompt可以与下游任务无关**
-  
+
   > 利用二级结构预测任务来探索提示如何在不需要它们的任务上执行。
-  
+
   > 数据集：CB513
-  
+
   > MSA Transformer可以利用MSA获得NC
   >
   > IC提示可以提供具有IC的蛋白质表示
-  
-<<<<<<< Updated upstream
+
   ![image-20221121173023233](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121173023233.png)
-=======
-  ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121173023233.png)
->>>>>>> Stashed changes
-  
+
   **提示可以是未知下游任务的知识探测**	Prompts can be knowledge probe for unknown downstream tasks. 
-  
+
   > 由于每个提示在学习后都可以被赋予特定的语义，我们利用提示作为知识探针来确定每个任务所需的信息
-  
+
   > 两个蛋白质工程任务:荧光景观预测和稳定性景观预测
   >
   > 1. 绿色荧光蛋白在光照下表现出明亮的绿色荧光。
   > 2. 荧光景观预测任务的目的是将蛋白质映射到对数荧光强度。
+
   
-  
-  
-<<<<<<< Updated upstream
+
   ![image-20221121173029461](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121173029461.png)
-=======
-  ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121173029461.png)
->>>>>>> Stashed changes
-
-
-
-
-
-
 
 
 
