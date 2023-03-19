@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/生物/未命名.md",
+                "file": "source/_posts/生物/gutMGene.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/生物/未命名.md",
+                "file": "source/_posts/生物/gutMGene.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/生物/未命名.md",
+                "file": "source/_posts/生物/gutMGene.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/生物/未命名.md"
+                "file": "source/_posts/生物/gutMGene.md"
               }
             }
           }
@@ -171,7 +171,11 @@
   },
   "active": "46d6f28d9b4ddf02",
   "lastOpenFiles": [
-    "source/_posts/生物/未命名.md",
+    "source/_obsidian/template.md",
+    "source/_posts/生物/gutMGene.md",
+    "README.md",
+    "2023-03-19.md",
+    "2023-03-18.md",
     "db.json",
     "public/archives/2023/index.html",
     "public/tags",
