@@ -5,6 +5,10 @@ categories:
 tags: [微调, 生物, 提示学习]
 date: 2023-03-18 12:17:42
 ---
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 [url](https://arxiv.org/pdf/2202.02944.pdf)
 
 
@@ -84,7 +88,11 @@ date: 2023-03-18 12:17:42
   >
   > 使用prompts避免微调PTLMs，从而提高性能。
 
+<<<<<<< Updated upstream
   ![image-20221119161432527](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119161432527.png)
+=======
+  ![1](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119161432527.png)
+>>>>>>> Stashed changes
 
   ConfProtein 有两个可学习的提示，分别针对**蛋白质本身的特性**和**蛋白质对中的交互构象**。
 
@@ -118,11 +126,19 @@ date: 2023-03-18 12:17:42
      >
      > **<u>为了促进正交性和泛化性，提示之间的信息流也被禁止。</u>**
      >
+<<<<<<< Updated upstream
      > ![image-20221119163833360](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119163833360.png)
      >
      > 注意力掩码矩阵M：
      >
      > ![image-20221119185040723](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119185040723.png)
+=======
+     > ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119163833360.png)
+     >
+     > 注意力掩码矩阵M：
+     >
+     > ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221119185040723.png)
+>>>>>>> Stashed changes
      >
      > m -- prompt长度  n -- seq长度
      >
@@ -158,7 +174,11 @@ date: 2023-03-18 12:17:42
 
   1. 数据集
 
+<<<<<<< Updated upstream
      ![image-20221211160150526](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211160150526.png)
+=======
+     ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211160150526.png)
+>>>>>>> Stashed changes
 
      - 预训练数据集：
 
@@ -275,7 +295,11 @@ date: 2023-03-18 12:17:42
   >
   > 预测任务：PPI预测和抗体-抗原结合亲和力预测
   
+<<<<<<< Updated upstream
   ![image-20221121162642127](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121162642127.png)
+=======
+  ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121162642127.png)
+>>>>>>> Stashed changes
   
   > Seq提示在SAbDab数据集中有更大的影响力，在抗体-抗原结合亲和力的预测中，氨基酸的性质是一个关键因素，可以通过Seq prompt得到
   
@@ -283,7 +307,11 @@ date: 2023-03-18 12:17:42
   
   **解释IC Prompt**
   
+<<<<<<< Updated upstream
   ![image-20221121170407554](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121170407554.png)
+=======
+  ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121170407554.png)
+>>>>>>> Stashed changes
   
   > a.可视化了有和没有IC提示的TAF4蛋白氨基酸的嵌入
   
@@ -295,7 +323,11 @@ date: 2023-03-18 12:17:42
   
   **Prompt对下游任务可能有不利影响**
   
+<<<<<<< Updated upstream
   ![image-20221211162009825](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211162009825.png)
+=======
+  ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221211162009825.png)
+>>>>>>> Stashed changes
   
   相同的提示在不同的数据集中对相同的任务产生截然相反的效果，说明使用不适当的知识会产生负面影响。
   
@@ -311,7 +343,11 @@ date: 2023-03-18 12:17:42
   >
   > IC提示可以提供具有IC的蛋白质表示
   
+<<<<<<< Updated upstream
   ![image-20221121173023233](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121173023233.png)
+=======
+  ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121173023233.png)
+>>>>>>> Stashed changes
   
   **提示可以是未知下游任务的知识探测**	Prompts can be knowledge probe for unknown downstream tasks. 
   
@@ -324,7 +360,11 @@ date: 2023-03-18 12:17:42
   
   
   
+<<<<<<< Updated upstream
   ![image-20221121173029461](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121173029461.png)
+=======
+  ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20221121173029461.png)
+>>>>>>> Stashed changes
 
 
 
