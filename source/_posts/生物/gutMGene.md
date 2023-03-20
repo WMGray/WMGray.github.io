@@ -149,7 +149,7 @@ date: 2023-03-19 12:56:32
 
      eg：上面第二条数据的network：包含了Bd这个微生物有关的所有代谢产物/基因 + 与Bile acid这个产物有关的所有微生物/基因
 
-     ![image-20230320154041323](images/image-20230320154041323.png)
+     ![image-20230320154041323](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320154041323.png)
 
      
 
