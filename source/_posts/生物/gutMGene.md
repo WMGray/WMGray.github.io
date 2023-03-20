@@ -2,7 +2,7 @@
 title: gutMGene
 categories:
   - 生物
-tags: []
+tags: [生物, 数据集/肠道菌群]
 date: 2023-03-19 12:56:32
 ---
 
@@ -30,7 +30,7 @@ date: 2023-03-19 12:56:32
 
 ### 2. 数据集
 
-- `gutMGene`：肠道微生物和微生物代谢产物靶基因的综合数据库
+- `gutMGene`：肠道微生物和微生物代谢产物靶基因的综合数据库（论文中经过实验验证）
 - [数据集地址](http://bio-annotation.cn/gutmgene)    [论文地址](https://academic.oup.com/nar/article/50/D1/D795/6368055)
 - 简介：
   - 目的：提供人类和小鼠肠道微生物和微生物代谢产物的目标基因的资源
@@ -42,3 +42,137 @@ date: 2023-03-19 12:56:32
     - 微生物代谢物
     - 靶基因
 
+### 3. 其他数据集：
+
+- GMrepo和gutMEGA策划并注释了人类肠道宏基因组
+- gutMDisorder收集了经实验验证的肠道菌群与疾病或干预措施之间的关联
+
+
+
+## 数据来源
+
+1. 用关键词列表搜索PubMed数据库，获取可能相关的论文，如“gut”，“bowel”，“microbe”，“metabolite”等
+
+   （>3000篇论文）
+
+2. 筛选出了记录实验验证的论文
+
+3. 从360多篇论文中手动提取了人和小鼠中的微生物-代谢物、微生物-靶点和代谢-靶点关系
+
+
+
+## 数据内容
+
+### 1. 数据构成
+
+- 人类中332种肠道微生物、207种微生物代谢物和223种基因之间的1331种关系
+
+- 小鼠中209种肠道微生物、149种微生物代谢物和544种基因之间的2349种关系
+
+  ![image-20230320112847125](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320112847125.png)
+
+### 2. 数据分布
+
+1. 六大类的分布（左--Human  右--Mice）
+
+   ![a](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320113803332.png)
+
+### 3. 整体介绍
+
+- gutMGene中的每个条目都包含两个用于记录关联的部分
+
+  - Relationships between gut microbes, metabolites, and genes
+
+    记录了肠道微生物、样品类型、底物、代谢物、基因、肠道微生物或代谢物下基因变化的描述、物种、实验方法、测量技术和基因表达实验技术的通量描述
+
+  - Literature
+
+    记录了对参考文献的详细描述
+
+1. 单个微生物相关的代谢物数量（对于一种微生物，能够产生代谢物的数量）
+
+   ![image-20230320122110450](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320122110450.png)
+
+   > eg: 小鼠中有20种微生物(y)，这20种微生物中的任一种与3种代谢物有关
+
+2. 单个代谢物相关的微生物数量（对于一种代谢物，有多少种微生物与之有关）
+
+   ![image-20230320122456463](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320122456463.png)
+
+   > eg：人类中有18种代谢物，这18种代谢物中的任一种代谢物与两种微生物有关
+
+3. 微生物和基因（一种微生物受多少种基因的调控）
+
+   ![image-20230320124855958](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320124855958.png)
+
+   > eg：有1种微生物与34种基因有关；有4种微生物，其中的任一种与7种基因有关 
+
+4. 基因和微生物（一种基因能够调控的微生物数量）
+
+   ![image-20230320124908515](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320124908515.png)
+
+   > eg：有两种基因，其中的任一种与8种微生物有关
+
+### 4. 树状数据库
+
+- 按照物种分为两类：**Human** 和 **Mouse**
+
+- 每一类下细分为三个小类：GutMicrobiota, Metabolite和Gene
+
+  ![image-20230320143739760](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320143739760.png)
+
+- example：
+
+  ![image-20230320154005003](https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320154005003.png)
+
+  包含以下信息：
+
+  1. 物种
+
+  2. Gut Microbiota (ID)：肠道菌群，可以使用ID来指代特定的菌群
+
+  3. Substrate (ID): 底物，指代代谢产物的前体物质
+
+  4. Metabolite (ID): 代谢产物，指代菌群代谢底物产生的化合物
+
+  5. Gene (ID): 基因，可以使用ID来指代特定的基因
+
+  6. Throughput: 数据处理的规模和复杂度，高通量或低通量
+
+  7. PMID: PubMed ID，文章的唯一标识符，可用于检索该文章
+
+  8. Details：给出了这个菌所能进行的一个代谢的总结（上图中的detail相同，且囊括了四种代谢反应）
+
+  9. Network：针对某一个反应
+
+     结点包括：当前微生物的**所有代谢产物**/基因 + 与**当前反应的代谢产物**/基因有关的所有微生物/基因
+
+     eg：上面第二条数据的network：包含了Bd这个微生物有关的所有代谢产物/基因 + 与Bile acid这个产物有关的所有微生物/基因
+
+     ![image-20230320154041323](images/image-20230320154041323.png)
+
+     
+
+
+
+## 补充知识
+
+  1. 高通量技术 与 低通量技术
+
+     - 高通量技术：
+
+       ✨能够同时处理大量生物样本、产生大量数据的技术
+
+       🎈优点在于其速度、高效性和大规模性
+
+       🥚大幅提高实验的产出量和数据量，并且可以从全面的角度来研究复杂的生物系统
+
+     - 低通量技术：
+
+       ✨能够处理少量生物样本、产生较少数据的技术
+
+       🎈优点在于其精度、可重复性和可控性
+
+       🥚主要用于深入了解某个生物系统的特定方面，如基因表达、蛋白质功能和代谢组学等
+
+  
