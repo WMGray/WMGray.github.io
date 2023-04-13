@@ -6,6 +6,7 @@ tags:
   - NoneBot
   - 笔记
   - QQ机器人
+cover: workout,strava
 date: 2023-03-20 18:20:26
 ---
 
