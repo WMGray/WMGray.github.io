@@ -11,7 +11,7 @@ date: 2023-03-18 19:19:56
 
 ##  数据集介绍：
 
-- gut_Discoders目前版本记录了579种肠道微生物与人类123种疾病或77种干预措施之间的2263种策划关联，以及在小鼠中273种肠道微生物与33种疾病或151种干预措施之间的930种策划关联
+- Gut_Discoders 目前版本记录了 579 种肠道微生物与人类 123 种疾病或 77 种干预措施之间的 2263 种策划关联，以及在小鼠中 273 种肠道微生物与 33 种疾病或 151 种干预措施之间的 930 种策划关联
 
   ![image.png](https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230318131247.png)
 
@@ -22,30 +22,30 @@ date: 2023-03-18 19:19:56
   ![image.png](https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230318153123.png)
 - 微生物和疾病数量/干预措施的直方图
   ![](https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230318153947.png)
-  >eg: 大多数人(54.75%，317/579)和小鼠(58.97%，161/273)微生物只与一种疾病和干预措施相关
+  >eg: 大多数人 (54.75%，317/579)和小鼠 (58.97%，161/273)微生物只与一种疾病和干预措施相关
   >某种微生物的数量改变后, 会影响到多种的疾病变化
 - 疾病数量/干预措施与微生物的直方图
   ![image.png](https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230318154953.png)
 
-  >eg:人类30种疾病及干预措施仅与一种微生物有关。而大多数疾病和干预措施(143种)与3种或3种以上微生物有关。患某种疾病/使用某种措施之后, 可以影响到的菌群种类的数量
+  >eg: 人类 30 种疾病及干预措施仅与一种微生物有关。而大多数疾病和干预措施 (143 种)与 3 种或 3 种以上微生物有关。患某种疾病/使用某种措施之后, 可以影响到的菌群种类的数量
 
 ## 数据来源
 
 - 从出版物中收集
 
   > 1. 从出版物中手动提取
-  > 2. 在 `PubMed` 数据库中搜索关键字列表,获取相关论文  eg: gut,intestinal,microbiota,microbiome,mice,rat,16S
+  > 2. 在 `PubMed` 数据库中搜索关键字列表, 获取相关论文  eg: gut, intestinal, microbiota, microbiome, mice, rat, 16 S
   > 3. 检查论文中记录实验验证的关联, 并进行复查
 
   ## 数据集内容
 
   ### 1. 整体介绍
 
-1. **Association**:记录关联类型、肠道微生物、疾病、干预措施(药物、食物或其他)、疾病或干预下肠道微生物变化的简要描述
+1. **Association**: 记录关联类型、肠道微生物、疾病、干预措施 (药物、食物或其他)、疾病或干预下肠道微生物变化的简要描述
 
-2. **Sample**:记录了物种(人或小鼠)、样本量和来源、性别、年龄、BMI、测序技术和平台等。
+2. **Sample**:记录了物种 (人或小鼠)、样本量和来源、性别、年龄、BMI、测序技术和平台等。
 
-3. **Literature**:记录了文献参考的详细描述。![image.png](https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230318163614.png)
+3. **Literature**: 记录了文献参考的详细描述。![image.png](https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230318163614.png)
 
   > - Gut Microbe: 肠道微生物名称
   > - Gut Microbiata ID: 肠道微生物的独特标识符号
@@ -65,19 +65,19 @@ date: 2023-03-18 19:19:56
 - Project ID: 对应的 NCBI 的 BioProject ID
 
 - Condition: 实验对象所处的状态
-	- HIV Infections:包括人类免疫缺陷病毒感染的范围，从无症状的血清阳性，到艾滋病相关综合症（ARC），再到获得性免疫缺陷综合症（AIDS）。
-	- Metformin:一种双胍类降糖药，用于治疗对饮食调整没有反应的非胰岛素依赖型糖尿病。
-	- Obesity:体重严重超过建议标准的状态，
+	- HIV Infections: 包括人类免疫缺陷病毒感染的范围，从无症状的血清阳性，到艾滋病相关综合症（ARC），再到获得性免疫缺陷综合症（AIDS）。
+	- Metformin: 一种双胍类降糖药，用于治疗对饮食调整没有反应的非胰岛素依赖型糖尿病。
+	- Obesity: 体重严重超过建议标准的状态，
 	- Weight Loss: 现有体重的减少
 
 - Sequencing Technology: 序列测序技术
 
 - Research Type:
-	- Gut microbiota associated with phenotype:与疾病相关的肠道微生物群
+	- Gut microbiota associated with phenotype: 与疾病相关的肠道微生物群
 	
 	  >当肠道微生物的种类、数量、组成等出现变化时，会影响宿主身体的健康状况，因此肠道微生物与多种疾病之间存在着密切的联系。
 	
-	- Interventions change the composition of gut microbiota:干预措施改变肠道菌群的组成
+	- Interventions change the composition of gut microbiota: 干预措施改变肠道菌群的组成
 
 	  >通过一些干预措施，如饮食、药物、植入物等，可以改变肠道微生物的组成，从而对宿主身体产生积极或消极的影响。
 	
@@ -89,10 +89,10 @@ date: 2023-03-18 19:19:56
 - 每一个物种下面都有两个子类别：肠道菌群和条件（Intervention 和 phenotype）
 	- 肠道菌群：分支为每一种菌
 	- 条件：condition 1 和 condition 2 
-		- phenotype：表现（eg：health 和 aged）
+		- Phenotype：表现（eg：health 和 aged）
 		- Intervention：药物、食物、其他（eg: Smoking Cessation 和 Non-Smokers）
 	
-- example：
+- Example：
 
   ![image.png](https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230318190212.png)
 
@@ -105,5 +105,5 @@ date: 2023-03-18 19:19:56
   - Microbial-Mediated Networks：某一个菌所有实验的图。可以进行筛选（疾病/干预、菌群增加/减少、文献/测序、实验设置）
   	![image.png](https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230318191031.png)
 
-  - details: 给出了该实验的参考文献、作者、年份、物种类别、实验设置、实验结论等
+  - Details: 给出了该实验的参考文献、作者、年份、物种类别、实验设置、实验结论等
   	![image.png](https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230318191158.png)
