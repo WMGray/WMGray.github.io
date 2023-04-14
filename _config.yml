@@ -3,13 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: WMGray
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: 浅吟
+language:
+  - zh-CN
+  - en
 timezone: ''
+
 
 
 markdown:

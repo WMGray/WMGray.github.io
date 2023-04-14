@@ -1,5 +1,20 @@
 {
   "main": {
+<<<<<<< HEAD
+    "id": "c4fd76dc5fe4656e",
+    "type": "split",
+    "children": [
+      {
+        "id": "3dabc6ef15c5ac87",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "149f565d2861b01e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+=======
     "id": "3e0bb7215e8b8ac4",
     "type": "split",
     "children": [
@@ -41,6 +56,7 @@
                 "mode": "source",
                 "source": false
               }
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
             }
           }
         ],
@@ -50,6 +66,17 @@
     "direction": "vertical"
   },
   "left": {
+<<<<<<< HEAD
+    "id": "ef185bfde88992bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "52692a1262ef5453",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "25e2746dd1410ff0",
+=======
     "id": "3a5b03c4e483a6f7",
     "type": "split",
     "children": [
@@ -58,7 +85,23 @@
         "type": "tabs",
         "children": [
           {
+<<<<<<< HEAD
+=======
+            "id": "69745edcab9a5813",
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+<<<<<<< HEAD
+            "id": "e8748cf548fa2ba4",
+=======
+>>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
             "id": "0513cdf2f6d16c45",
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -68,7 +111,11 @@
             }
           },
           {
+<<<<<<< HEAD
+            "id": "207b04538fadffda",
+=======
             "id": "adc26143c16e8155",
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
             "type": "leaf",
             "state": {
               "type": "search",
@@ -83,7 +130,11 @@
             }
           },
           {
+<<<<<<< HEAD
+            "id": "09a25e7542ad74ac",
+=======
             "id": "b89b5af424bbb5b3",
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -119,6 +170,17 @@
     "width": 300
   },
   "right": {
+<<<<<<< HEAD
+    "id": "d4e43f07f6796f52",
+    "type": "split",
+    "children": [
+      {
+        "id": "02f97ca95238fe78",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d0bb87db5d5be6b2",
+=======
     "id": "c676df4916a6e8e0",
     "type": "split",
     "children": [
@@ -129,6 +191,7 @@
         "children": [
           {
             "id": "67b46a98f9bc2729",
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -136,6 +199,7 @@
             }
           },
           {
+<<<<<<< HEAD
             "id": "98ae608123d127a4",
             "type": "leaf",
             "state": {
@@ -162,12 +226,25 @@
         "dimension": 27.515151515151516,
         "children": [
           {
+=======
+<<<<<<< HEAD
+            "id": "ebb0ec86ce47e421",
+=======
+>>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
             "id": "4c9d9c15d92e8bc2",
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "source/_posts/杂谈/Pyqt Designer.md",
+=======
+<<<<<<< HEAD
+=======
+                "file": "source/_posts/杂谈/nonebot搭建QQ机器人.md",
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+>>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,16 +256,28 @@
             }
           },
           {
+<<<<<<< HEAD
+            "id": "cc32827b25607b39",
+=======
             "id": "5be33f5b5821e3a1",
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "source/_posts/杂谈/Pyqt Designer.md",
+=======
+<<<<<<< HEAD
+=======
+                "file": "source/_posts/杂谈/nonebot搭建QQ机器人.md",
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+>>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
+<<<<<<< HEAD
           }
         ]
       },
@@ -197,7 +286,32 @@
         "type": "tabs",
         "dimension": 33.33333333333333,
         "children": [
+=======
+          },
           {
+<<<<<<< HEAD
+            "id": "38b0618b9afabd72",
+=======
+            "id": "98ae608123d127a4",
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+>>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
+          {
+<<<<<<< HEAD
+            "id": "26ab785e4bff5f01",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+=======
             "id": "eba556947471f493",
             "type": "leaf",
             "state": {
@@ -205,6 +319,7 @@
               "state": {
                 "file": "source/_posts/杂谈/Pyqt Designer.md"
               }
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
             }
           }
         ]
@@ -229,7 +344,15 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
+<<<<<<< HEAD
   "active": "f74b4a11ccd1c7a5",
+=======
+<<<<<<< HEAD
+  "active": "e8748cf548fa2ba4",
+  "lastOpenFiles": []
+=======
+  "active": "46d6f28d9b4ddf02",
+>>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
   "lastOpenFiles": [
     "source/_posts/杂谈/nonebot搭建QQ机器人.md",
     "source/_posts/杂谈/Pyqt Designer.md",
@@ -250,4 +373,5 @@
     "public/archives",
     "public"
   ]
+>>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
 }
