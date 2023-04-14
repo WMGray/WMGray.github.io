@@ -1,94 +1,39 @@
 {
   "main": {
-<<<<<<< HEAD
-    "id": "c4fd76dc5fe4656e",
+    "id": "18678f324188e716",
     "type": "split",
     "children": [
       {
-        "id": "3dabc6ef15c5ac87",
+        "id": "76b2d3bb409f0d6a",
         "type": "tabs",
         "children": [
           {
-            "id": "149f565d2861b01e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-=======
-    "id": "3e0bb7215e8b8ac4",
-    "type": "split",
-    "children": [
-      {
-        "id": "a553986d638b3fb3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d5cf66d18f29ab47",
+            "id": "8afe0f71af10dc7c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/生物/gutMDisorder.md",
+                "file": "source/_posts/杂谈/linux/nvtop的安装.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "2dcb2df180b38717",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "source/_posts/生物/未命名.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f74b4a11ccd1c7a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "source/_posts/杂谈/Pyqt Designer.md",
-                "mode": "source",
-                "source": false
-              }
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-<<<<<<< HEAD
-    "id": "ef185bfde88992bb",
+    "id": "f22025b383a4ee4b",
     "type": "split",
     "children": [
       {
-        "id": "52692a1262ef5453",
+        "id": "085d2b2644448201",
         "type": "tabs",
         "children": [
           {
-            "id": "25e2746dd1410ff0",
-=======
-    "id": "3a5b03c4e483a6f7",
-    "type": "split",
-    "children": [
-      {
-        "id": "01b6e42d0a00cd71",
-        "type": "tabs",
-        "children": [
-          {
-<<<<<<< HEAD
-=======
-            "id": "69745edcab9a5813",
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+            "id": "20933b72d99142f6",
             "type": "leaf",
             "state": {
               "type": "recent-files",
@@ -96,12 +41,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "e8748cf548fa2ba4",
-=======
->>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
-            "id": "0513cdf2f6d16c45",
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+            "id": "f4ed418e364c1cd7",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -111,16 +51,12 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "207b04538fadffda",
-=======
-            "id": "adc26143c16e8155",
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+            "id": "408650927bfffd8a",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#这个是你的仓库的ssh",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -130,68 +66,30 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "09a25e7542ad74ac",
-=======
-            "id": "b89b5af424bbb5b3",
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+            "id": "710fb0bb5934311f",
             "type": "leaf",
             "state": {
               "type": "starred",
               "state": {}
             }
-          },
-          {
-            "id": "47a4203f80e9ae4d",
-            "type": "leaf",
-            "state": {
-              "type": "langr-search-panel",
-              "state": {}
-            }
           }
-        ]
-      },
-      {
-        "id": "5324a00829a99374",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "69745edcab9a5813",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
-          }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
   "right": {
-<<<<<<< HEAD
-    "id": "d4e43f07f6796f52",
+    "id": "434538e768810f35",
     "type": "split",
     "children": [
       {
-        "id": "02f97ca95238fe78",
+        "id": "c991be9ada859814",
         "type": "tabs",
         "children": [
           {
-            "id": "d0bb87db5d5be6b2",
-=======
-    "id": "c676df4916a6e8e0",
-    "type": "split",
-    "children": [
-      {
-        "id": "c18810a1526ef307",
-        "type": "tabs",
-        "dimension": 39.151515151515156,
-        "children": [
-          {
-            "id": "67b46a98f9bc2729",
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+            "id": "8928b79520e52474",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -199,52 +97,12 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "98ae608123d127a4",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "2cc7b3575b1a8aef",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          }
-        ]
-      },
-      {
-        "id": "1ece0ef41ba1067e",
-        "type": "tabs",
-        "dimension": 27.515151515151516,
-        "children": [
-          {
-=======
-<<<<<<< HEAD
-            "id": "ebb0ec86ce47e421",
-=======
->>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
-            "id": "4c9d9c15d92e8bc2",
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+            "id": "b3479fec268ec4a6",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "source/_posts/杂谈/Pyqt Designer.md",
-=======
-<<<<<<< HEAD
-=======
-                "file": "source/_posts/杂谈/nonebot搭建QQ机器人.md",
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
->>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
+                "file": "source/_posts/杂谈/linux/nvtop的安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -256,44 +114,19 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "cc32827b25607b39",
-=======
-            "id": "5be33f5b5821e3a1",
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+            "id": "6822a398400f06e0",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-                "file": "source/_posts/杂谈/Pyqt Designer.md",
-=======
-<<<<<<< HEAD
-=======
-                "file": "source/_posts/杂谈/nonebot搭建QQ机器人.md",
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
->>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
+                "file": "source/_posts/杂谈/linux/nvtop的安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
-<<<<<<< HEAD
-          }
-        ]
-      },
-      {
-        "id": "fcc52fe34b2bb690",
-        "type": "tabs",
-        "dimension": 33.33333333333333,
-        "children": [
-=======
           },
           {
-<<<<<<< HEAD
-            "id": "38b0618b9afabd72",
-=======
-            "id": "98ae608123d127a4",
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
+            "id": "12f95712b6982f6f",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -303,30 +136,22 @@
               }
             }
           },
->>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
           {
-<<<<<<< HEAD
-            "id": "26ab785e4bff5f01",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {}
-=======
-            "id": "eba556947471f493",
+            "id": "e20da3c6f50684af",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/杂谈/Pyqt Designer.md"
+                "file": "source/_posts/杂谈/linux/nvtop的安装.md"
               }
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -344,34 +169,17 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-<<<<<<< HEAD
-  "active": "f74b4a11ccd1c7a5",
-=======
-<<<<<<< HEAD
-  "active": "e8748cf548fa2ba4",
-  "lastOpenFiles": []
-=======
-  "active": "46d6f28d9b4ddf02",
->>>>>>> 44857bc63a688c1f3339d30a4355fb62265d2be8
+  "active": "8afe0f71af10dc7c",
   "lastOpenFiles": [
+    "source/_posts/杂谈/linux/linux创建用户并赋予sudo权限.md",
+    "2023-04-15.md",
+    "source/_posts/杂谈/linux/nvtop的安装.md",
+    "source/_posts/微调/Prompt-Guided Injection of Conformation to Pre-trained Protein Model.md",
     "source/_posts/杂谈/nonebot搭建QQ机器人.md",
+    "source/_posts/杂谈/安装docker.md",
     "source/_posts/杂谈/Pyqt Designer.md",
-    "source/_posts/生物/未命名.md",
-    "source/_posts/生物/gutMDisorder.md",
-    "source/_posts/生物/gutMGene.md",
+    "source/_posts/杂谈/Hexo自动分类.md",
     "source/_posts/杂谈/Hexo搭建笔记.md",
-    "source/_obsidian/template.md",
-    "README.md",
-    "2023-03-19.md",
-    "2023-03-18.md",
-    "db.json",
-    "public/archives/2023/index.html",
-    "public/tags",
-    "public/categories",
-    "public/archives/2023/03",
-    "public/archives/2023",
-    "public/archives",
-    "public"
+    "source/_obsidian/template.md"
   ]
->>>>>>> e3fa495dbe1b36b1fa5dae3cea61e8ee195aa0e1
 }

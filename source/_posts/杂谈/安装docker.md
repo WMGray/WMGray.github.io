@@ -1,6 +1,12 @@
 ---
+title: 安装docker
 categories:
   - 杂谈
+tags:
+  - 笔记
+  - docker
+date: 2023-04-15 00:05:56
+cover:
 ---
 ## 1. 安装docker
 
@@ -292,6 +298,6 @@ docker load -i test_tar.tar
 
 1. [Docker--从入门到实践](https://yeasy.gitbook.io/docker_practice/install/ubuntu)
 
-2. [两种方法迁移 Docker 的默认安装(存储)目录](https://strikefreedom.top/archives/migrate-docker-installation-directory)
-3. [Ubuntu18.04安装docker及nvidia docker](https://zhuanlan.zhihu.com/p/305952676)
-4. 
+1. [两种方法迁移 Docker 的默认安装(存储)目录](https://strikefreedom.top/archives/migrate-docker-installation-directory)
+2. [Ubuntu18.04安装docker及nvidia docker](https://zhuanlan.zhihu.com/p/305952676)
+3. 
