@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "427c779abc73b24a",
+        "id": "a553986d638b3fb3",
         "type": "tabs",
         "children": [
           {
-            "id": "46d6f28d9b4ddf02",
+            "id": "d5cf66d18f29ab47",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/杂谈/nonebot搭建QQ机器人.md",
+                "file": "source/_posts/生物/gutMDisorder.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2dcb2df180b38717",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/生物/未命名.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f74b4a11ccd1c7a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/杂谈/Pyqt Designer.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -32,14 +57,6 @@
         "id": "01b6e42d0a00cd71",
         "type": "tabs",
         "children": [
-          {
-            "id": "69745edcab9a5813",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
-          },
           {
             "id": "0513cdf2f6d16c45",
             "type": "leaf",
@@ -56,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#这个是你的仓库的ssh",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,9 +89,30 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "47a4203f80e9ae4d",
+            "type": "leaf",
+            "state": {
+              "type": "langr-search-panel",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "5324a00829a99374",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69745edcab9a5813",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,6 +125,7 @@
       {
         "id": "c18810a1526ef307",
         "type": "tabs",
+        "dimension": 39.151515151515156,
         "children": [
           {
             "id": "67b46a98f9bc2729",
@@ -97,12 +136,38 @@
             }
           },
           {
+            "id": "98ae608123d127a4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2cc7b3575b1a8aef",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "1ece0ef41ba1067e",
+        "type": "tabs",
+        "dimension": 27.515151515151516,
+        "children": [
+          {
             "id": "4c9d9c15d92e8bc2",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/杂谈/nonebot搭建QQ机器人.md",
+                "file": "source/_posts/杂谈/Pyqt Designer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,30 +184,26 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/杂谈/nonebot搭建QQ机器人.md",
+                "file": "source/_posts/杂谈/Pyqt Designer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
-          },
-          {
-            "id": "98ae608123d127a4",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
+          }
+        ]
+      },
+      {
+        "id": "fcc52fe34b2bb690",
+        "type": "tabs",
+        "dimension": 33.33333333333333,
+        "children": [
           {
             "id": "eba556947471f493",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/杂谈/nonebot搭建QQ机器人.md"
+                "file": "source/_posts/杂谈/Pyqt Designer.md"
               }
             }
           }
@@ -150,8 +211,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,9 +229,14 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "46d6f28d9b4ddf02",
+  "active": "f74b4a11ccd1c7a5",
   "lastOpenFiles": [
+    "source/_posts/杂谈/nonebot搭建QQ机器人.md",
+    "source/_posts/杂谈/Pyqt Designer.md",
+    "source/_posts/生物/未命名.md",
+    "source/_posts/生物/gutMDisorder.md",
     "source/_posts/生物/gutMGene.md",
+    "source/_posts/杂谈/Hexo搭建笔记.md",
     "source/_obsidian/template.md",
     "README.md",
     "2023-03-19.md",
