@@ -14,6 +14,7 @@ sidebar:
     notes: '[笔记](/notes/)'
     more: '[更多](/more/)'
 
+
 # 文章搜索
 search:
   service: local_search # local_search, todo...
@@ -35,3 +36,11 @@ search_docs:
   layout: search
   filter: /wiki/
   placeholder: 文档搜索
+
+
+style:
+  border-radius:
+    card: 12px # 卡片圆角
+    block: 12px # 块圆角
+    bar: 6px # 导航栏圆角
+    image: 6px # 图片圆角
