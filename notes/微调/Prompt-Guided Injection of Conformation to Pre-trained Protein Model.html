@@ -24,9 +24,9 @@
 
   
     <meta name="description" content="url #微调 #生物 #提示学习 Summary ​		针对目前蛋白质预训练模型生成的embedding固定的问题，提出了一种解决思路：在预训练中引入prompt learning，可以针对不同的下游任务选择不同的prompt，将相关知识注入到模型中以便产生多变的embedding Background ​		给定一个氨基酸序列，除非蛋白质变性，否则一级结构和二级结构（无序区域除外）将被确定。由">
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Prompt-Guided Injection of Conformation to Pre-trained Protein Model">
-<meta property="og:url" content="https://wmgray.github.io/2023/03/4c46cbf45123.html">
+<meta property="og:url" content="https://wmgray.github.io/notes/%E5%BE%AE%E8%B0%83/Prompt-Guided%20Injection%20of%20Conformation%20to%20Pre-trained%20Protein%20Model.html">
 <meta property="og:site_name" content="WMGray">
 <meta property="og:description" content="url #微调 #生物 #提示学习 Summary ​		针对目前蛋白质预训练模型生成的embedding固定的问题，提出了一种解决思路：在预训练中引入prompt learning，可以针对不同的下游任务选择不同的prompt，将相关知识注入到模型中以便产生多变的embedding Background ​		给定一个氨基酸序列，除非蛋白质变性，否则一级结构和二级结构（无序区域除外）将被确定。由">
 <meta property="og:locale" content="zh_CN">
@@ -82,10 +82,8 @@
   
 
 
-
-
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='post'>
+    <aside class='l_left' layout='page'>
     
 
   
@@ -97,29 +95,27 @@
 
 
 <div class="widgets">
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
-
 
 <widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Prompt-Guided Injection of Conformation to Pre-trained Protein Model</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#summary"><span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#background"><span class="toc-text">Background</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#significance"><span class="toc-text">Significance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#method"><span class="toc-text">Method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#results"><span class="toc-text">Results</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#limitations"><span class="toc-text">Limitations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#questions"><span class="toc-text">Questions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D"><span class="toc-text">详细介绍</span></a></li></ol></div></div></widget>
 
-
-
-
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 </div>
 
 
     </aside>
     <div class='l_main'>
       
+  
+
+<header class="header mobile-only"><div class="logo-wrap"><a class="title" href="/"><div class="main" ff="title">WMGray</div><div class="sub normal cap">浅吟随笔</div><div class="sub hover cap" style="opacity:0"> hello world</div></a></div></header>
+
+
 
       
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%BE%AE%E8%B0%83/">微调</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-03-18T12:17:42.000Z">2023-03-18</time></div></div>
-
-<article class='md-text content post'>
-<h1 class="article-title"><span>Prompt-Guided Injection of Conformation to Pre-trained Protein Model</span></h1>
-<p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2202.02944.pdf">url</a></p>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/notes/%E5%BE%AE%E8%B0%83/Prompt-Guided%20Injection%20of%20Conformation%20to%20Pre-trained%20Protein%20Model.html">Prompt-Guided Injection of Conformation to Pre-trained Protein Model</a></div></div>
+<article class="md-text content page"><h1 class="article-title"><span>Prompt-Guided Injection of Conformation to Pre-trained Protein Model</span></h1><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2202.02944.pdf">url</a></p>
 <p>#微调 #生物 #提示学习</p>
 <h3 id="summary">Summary</h3>
 <p>​		针对目前蛋白质预训练模型生成的embedding固定的问题，提出了一种解决思路：在预训练中引入prompt learning，可以针对不同的下游任务选择不同的prompt，将相关知识注入到模型中以便产生多变的embedding</p>
@@ -530,19 +526,7 @@
 </li>
 </ol>
 <p>​</p>
-
-
-<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div></section></div>
-
 </article>
-
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2023/03/244774abb49a.html">gutMDisorder</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2023/03/83f5e002c6f9.html">Hexo搭建笔记</a></div></section></div>
-
-
-
-
-
 
 
 

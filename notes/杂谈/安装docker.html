@@ -24,9 +24,9 @@
 
   
     <meta name="description" content="1. 安装docker   卸载旧版本 123sudo apt-get remove docker \               docker-engine \               docker.io   使用 APT 安装 由于 apt 源使用 HTTPS 以确保软件下载过程中不被篡改。因此，我们首先需要添加使用 HTTPS 传输的软件包以及 CA 证书。 12345678sudo a">
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:title" content="安装docker">
-<meta property="og:url" content="https://wmgray.github.io/2023/04/ebe25e5ec8d5.html">
+<meta property="og:url" content="https://wmgray.github.io/notes/%E6%9D%82%E8%B0%88/%E5%AE%89%E8%A3%85docker.html">
 <meta property="og:site_name" content="WMGray">
 <meta property="og:description" content="1. 安装docker   卸载旧版本 123sudo apt-get remove docker \               docker-engine \               docker.io   使用 APT 安装 由于 apt 源使用 HTTPS 以确保软件下载过程中不被篡改。因此，我们首先需要添加使用 HTTPS 传输的软件包以及 CA 证书。 12345678sudo a">
 <meta property="og:locale" content="zh_CN">
@@ -70,10 +70,8 @@
   
 
 
-
-
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='post'>
+    <aside class='l_left' layout='page'>
     
 
   
@@ -85,29 +83,27 @@
 
 
 <div class="widgets">
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
-
 
 <widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">安装docker</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85docker"><span class="toc-text">1. 安装docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%BF%81%E7%A7%BBdocker%E7%9A%84%E9%BB%98%E8%AE%A4%E5%AE%89%E8%A3%85-%E5%AD%98%E5%82%A8-%E8%B7%AF%E5%BE%84"><span class="toc-text">2. 迁移docker的默认安装（存储）路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-docker-gpu%E9%95%9C%E5%83%8F"><span class="toc-text">3. Docker – GPU镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85conda"><span class="toc-text">4. 安装Conda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E5%88%B0docker"><span class="toc-text">5. 将本地环境部署到docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%EF%BC%9A"><span class="toc-text">参考：</span></a></li></ol></div></div></widget>
 
-
-
-
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 </div>
 
 
     </aside>
     <div class='l_main'>
       
+  
+
+<header class="header mobile-only"><div class="logo-wrap"><a class="title" href="/"><div class="main" ff="title">WMGray</div><div class="sub normal cap">浅吟随笔</div><div class="sub hover cap" style="opacity:0"> hello world</div></a></div></header>
+
+
 
       
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-04-15T00:05:56.000Z">2023-04-15</time></div></div>
-
-<article class='md-text content post'>
-<h1 class="article-title"><span>安装docker</span></h1>
-<h2 id="1-安装docker">1. 安装docker</h2>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/notes/%E6%9D%82%E8%B0%88/%E5%AE%89%E8%A3%85docker.html">安装docker</a></div></div>
+<article class="md-text content page"><h1 class="article-title"><span>安装docker</span></h1><h2 id="1-安装docker">1. 安装docker</h2>
 <ol>
 <li>
 <p>卸载旧版本</p>
@@ -243,19 +239,7 @@
 </li>
 <li></li>
 </ol>
-
-
-<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div></section></div>
-
 </article>
-
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2023/04/e6ba03a7e3b4.html">linux创建用户并赋予sudo权限</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2023/03/de243851305f.html">Pyqt Designer</a></div></section></div>
-
-
-
-
-
 
 
 
