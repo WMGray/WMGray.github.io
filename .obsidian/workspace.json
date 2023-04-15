@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/杂谈/linux/nvtop的安装.md",
+                "file": "source/_posts/杂谈/Hexo搭建笔记.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/杂谈/linux/nvtop的安装.md",
+                "file": "source/_posts/杂谈/Hexo搭建笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/杂谈/linux/nvtop的安装.md",
+                "file": "source/_posts/杂谈/Hexo搭建笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/杂谈/linux/nvtop的安装.md"
+                "file": "source/_posts/杂谈/Hexo搭建笔记.md"
               }
             }
           }
@@ -171,15 +171,26 @@
   },
   "active": "8afe0f71af10dc7c",
   "lastOpenFiles": [
+    "db.json",
+    "public/2023/04/5ecc33becee1.html",
+    "public/css/main.css",
+    "public/css",
+    "public/2023/04/edfa98da61bc.html",
+    "public/tags/linux/index.html",
+    "public/tags/linux",
+    "public/tags/数据集-肠道菌群/index.html",
+    "public/tags/数据集-肠道菌群",
+    "public/tags/docker/index.html",
+    "public/tags/docker",
+    "source/_posts/杂谈/Hexo自动分类.md",
+    "source/_posts/杂谈/安装docker.md",
+    "source/_posts/杂谈/Hexo搭建笔记.md",
+    "source/_posts/杂谈/nonebot搭建QQ机器人.md",
+    "source/_posts/杂谈/Pyqt Designer.md",
+    "source/_posts/杂谈/linux/nvtop的安装.md",
     "source/_posts/杂谈/linux/linux创建用户并赋予sudo权限.md",
     "2023-04-15.md",
-    "source/_posts/杂谈/linux/nvtop的安装.md",
     "source/_posts/微调/Prompt-Guided Injection of Conformation to Pre-trained Protein Model.md",
-    "source/_posts/杂谈/nonebot搭建QQ机器人.md",
-    "source/_posts/杂谈/安装docker.md",
-    "source/_posts/杂谈/Pyqt Designer.md",
-    "source/_posts/杂谈/Hexo自动分类.md",
-    "source/_posts/杂谈/Hexo搭建笔记.md",
     "source/_obsidian/template.md"
   ]
 }
