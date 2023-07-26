@@ -1,9 +1,9 @@
 {
   "accentColor": "",
-  "baseFontSize": 23,
+  "baseFontSize": 20,
   "interfaceFontFamily": "楷体",
   "textFontFamily": "楷体",
-  "cssTheme": "Cyber Glow",
+  "cssTheme": "Maple",
   "theme": "moonstone",
   "enabledCssSnippets": [
     "表格优化",

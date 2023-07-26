@@ -5,6 +5,8 @@
   "spellcheck": true,
   "useMarkdownLinks": true,
   "attachmentFolderPath": "./images",
-  "readableLineLength": true,
-  "alwaysUpdateLinks": true
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true,
+  "tabSize": 2,
+  "useTab": false
 }

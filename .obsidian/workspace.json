@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "76b2d3bb409f0d6a",
+        "id": "8fb498beff980756",
         "type": "tabs",
         "children": [
           {
-            "id": "8afe0f71af10dc7c",
+            "id": "fa442269b1d8cd61",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/杂谈/Hexo搭建笔记.md",
+                "file": "source/_posts/生物/MDGF-MCEC a multi-view dual attention embedding.md",
                 "mode": "source",
                 "source": false
               }
@@ -32,14 +32,6 @@
         "id": "085d2b2644448201",
         "type": "tabs",
         "children": [
-          {
-            "id": "20933b72d99142f6",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
-          },
           {
             "id": "f4ed418e364c1cd7",
             "type": "leaf",
@@ -73,12 +65,26 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "67d7285a8527443a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "20933b72d99142f6",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "434538e768810f35",
@@ -102,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/杂谈/Hexo搭建笔记.md",
+                "file": "source/_posts/生物/MDGF-MCEC a multi-view dual attention embedding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,20 +125,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/杂谈/Hexo搭建笔记.md",
+                "file": "source/_posts/生物/MDGF-MCEC a multi-view dual attention embedding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "12f95712b6982f6f",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
               }
             }
           },
@@ -142,7 +137,24 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/杂谈/Hexo搭建笔记.md"
+                "file": "source/_posts/生物/MDGF-MCEC a multi-view dual attention embedding.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "73be9d7327c4b7e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "12f95712b6982f6f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
               }
             }
           }
@@ -169,28 +181,53 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "8afe0f71af10dc7c",
+  "active": "fa442269b1d8cd61",
   "lastOpenFiles": [
     "db.json",
-    "public/2023/04/5ecc33becee1.html",
-    "public/css/main.css",
-    "public/css",
-    "public/2023/04/edfa98da61bc.html",
-    "public/tags/linux/index.html",
-    "public/tags/linux",
+    "public/archives/2023/03/index.html",
+    "public/archives/2023/03",
+    "public/tags/笔记/index.html",
+    "public/tags/笔记",
     "public/tags/数据集-肠道菌群/index.html",
     "public/tags/数据集-肠道菌群",
+    "public/tags/linux/index.html",
+    "public/tags/linux",
     "public/tags/docker/index.html",
     "public/tags/docker",
-    "source/_posts/杂谈/Hexo自动分类.md",
-    "source/_posts/杂谈/安装docker.md",
-    "source/_posts/杂谈/Hexo搭建笔记.md",
-    "source/_posts/杂谈/nonebot搭建QQ机器人.md",
-    "source/_posts/杂谈/Pyqt Designer.md",
-    "source/_posts/杂谈/linux/nvtop的安装.md",
-    "source/_posts/杂谈/linux/linux创建用户并赋予sudo权限.md",
-    "2023-04-15.md",
-    "source/_posts/微调/Prompt-Guided Injection of Conformation to Pre-trained Protein Model.md",
-    "source/_obsidian/template.md"
+    "source/_posts/生物/MDGF-MCEC a multi-view dual attention embedding.md",
+    "source/_posts/生物/image-20230418162710063.png",
+    "source/_posts/生物/image-20230418162159055.png",
+    "node_modules/isstream/README.md",
+    "node_modules/isstream/LICENSE.md",
+    "node_modules/is-stream/readme.md",
+    "node_modules/is-primitive/README.md",
+    "node_modules/is-buffer/README.md",
+    "node_modules/hexo-renderer-marked/node_modules/highlight.js/scss/school-book.png",
+    "node_modules/hexo-renderer-marked/node_modules/highlight.js/scss/pojoaque.jpg",
+    "node_modules/hexo-renderer-marked/node_modules/highlight.js/scss/brown-papersq.png",
+    "node_modules/hexo-site/node_modules/highlight.js/scss/school-book.png",
+    "node_modules/hexo-site/node_modules/highlight.js/scss/pojoaque.jpg",
+    "node_modules/hexo-site/node_modules/highlight.js/scss/brown-papersq.png",
+    "node_modules/cheerio/node_modules/htmlparser2/README.md",
+    "node_modules/nan/tools/README.md",
+    "node_modules/hexo-related-popular-posts/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
+    "node_modules/gapitoken/node_modules/request/CHANGELOG.md",
+    "node_modules/nan/doc/callback.md",
+    "node_modules/nan/doc/v8_misc.md",
+    "node_modules/nan/doc/v8_internals.md",
+    "node_modules/nan/doc/string_bytes.md",
+    "node_modules/nan/doc/script.md",
+    "node_modules/nan/doc/scopes.md",
+    "node_modules/nan/doc/object_wrappers.md",
+    "node_modules/nan/doc/persistent.md",
+    "node_modules/nan/doc/node_misc.md",
+    "node_modules/nan/doc/new.md",
+    "node_modules/nan/doc/methods.md",
+    "node_modules/nan/doc/maybe_types.md",
+    "node_modules/nan/doc/json.md",
+    "node_modules/nan/doc/errors.md",
+    "node_modules/nan/doc/converters.md",
+    "node_modules/hexo-site/themes/landscape/source/fancybox/helpers/fancybox_buttons.png",
+    "node_modules/hexo-site/themes/landscape/source/css/images/banner.jpg"
   ]
 }
