@@ -31,6 +31,6 @@
     "markdown-it-color-text": "^1.0.0",
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-kbd": "^2.2.2",
-    "markdown-it-multimd-table": "^4.2.1"
+    "markdown-it-multimd-table": "^4.2.3"
   }
 }
