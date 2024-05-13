@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 7.2.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>gutMGene - WMGray</title>
+
+  
+    <meta name="description" content="数据集介绍：1. 背景 哺乳动物血液中发现的代谢物中有10%来自肠道菌群，它们可以通过激活或抑制基因表达对宿主产生系统性影响  肠道微生物与宿主之间的关系是高度互利的，宿主为微生物提供营养物质和庇护所，而微生物则帮助宿主从不可消化的食物中获取能量并合成必需的代谢物  代谢物分为三类：  由微生物从外源消耗的化合物中产生 肠道微生物可以代谢宿主摄入的外源性物质，例如食物中的碳水化合物、蛋白质和脂类等">
+<meta property="og:type" content="website">
+<meta property="og:title" content="gutMGene">
+<meta property="og:url" content="https://wmgray.github.io/notes/%E7%94%9F%E7%89%A9/gutMGene.html">
+<meta property="og:site_name" content="WMGray">
+<meta property="og:description" content="数据集介绍：1. 背景 哺乳动物血液中发现的代谢物中有10%来自肠道菌群，它们可以通过激活或抑制基因表达对宿主产生系统性影响  肠道微生物与宿主之间的关系是高度互利的，宿主为微生物提供营养物质和庇护所，而微生物则帮助宿主从不可消化的食物中获取能量并合成必需的代谢物  代谢物分为三类：  由微生物从外源消耗的化合物中产生 肠道微生物可以代谢宿主摄入的外源性物质，例如食物中的碳水化合物、蛋白质和脂类等">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320112847125.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320113803332.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320122110450.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320122456463.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320124855958.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320124908515.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320143739760.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320154005003.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320154041323.png">
+<meta property="article:published_time" content="2023-03-19T12:56:32.000Z">
+<meta property="article:modified_time" content="2024-05-13T07:49:21.859Z">
+<meta property="article:author" content="浅吟">
+<meta property="article:tag" content="生物">
+<meta property="article:tag" content="数据集&#x2F;肠道菌群">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320112847125.png">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='page'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="title" href="/"><div class="main" ff="title">WMGray</div><div class="sub normal cap">浅吟随笔</div><div class="sub hover cap" style="opacity:0"> hello world</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item" href="/">文章</a><a class="nav-item" href="/notes/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">gutMGene</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="toc-text">数据集介绍：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%83%8C%E6%99%AF"><span class="toc-text">1. 背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">2. 数据集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%B6%E4%BB%96%E6%95%B0%E6%8D%AE%E9%9B%86%EF%BC%9A"><span class="toc-text">3. 其他数据集：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%9D%A5%E6%BA%90"><span class="toc-text">数据来源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%86%85%E5%AE%B9"><span class="toc-text">数据内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E6%8D%AE%E6%9E%84%E6%88%90"><span class="toc-text">1. 数据构成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%95%B0%E6%8D%AE%E5%88%86%E5%B8%83"><span class="toc-text">2. 数据分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%95%B4%E4%BD%93%E4%BB%8B%E7%BB%8D"><span class="toc-text">3. 整体介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%A0%91%E7%8A%B6%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">4. 树状数据库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86"><span class="toc-text">补充知识</span></a></li></ol></div></div></widget>
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+  
+
+<header class="header mobile-only"><div class="logo-wrap"><a class="title" href="/"><div class="main" ff="title">WMGray</div><div class="sub normal cap">浅吟随笔</div><div class="sub hover cap" style="opacity:0"> hello world</div></a></div></header>
+
+
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/notes/%E7%94%9F%E7%89%A9/gutMGene.html">gutMGene</a></div></div>
+<article class="md-text content page"><h1 class="article-title"><span>gutMGene</span></h1><h2 id="数据集介绍："><a href="#数据集介绍：" class="headerlink" title="数据集介绍："></a>数据集介绍：</h2><h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h3><ul>
+<li><p>哺乳动物血液中发现的代谢物中有10%来自肠道菌群，它们可以通过激活或抑制基因表达对宿主产生系统性影响</p>
+</li>
+<li><p>肠道微生物与宿主之间的关系是高度互利的，宿主为微生物提供营养物质和庇护所，而微生物则帮助宿主从不可消化的食物中获取能量并合成必需的代谢物</p>
+<blockquote>
+<p>代谢物分为三类：</p>
+<ol>
+<li><p>由微生物从外源消耗的化合物中产生</p>
+<p>肠道微生物可以代谢宿主摄入的外源性物质，例如食物中的碳水化合物、蛋白质和脂类等，产生代谢产物</p>
+</li>
+<li><p>由宿主产生，由肠道微生物进行生物化学修饰</p>
+<p>宿主细胞可以合成一些化合物，例如胆固醇、荷尔蒙和黄酮类化合物等，这些化合物在肠道中经过微生物的代谢和修饰后，产生了一些具有生物活性的代谢产物</p>
+</li>
+<li><p>由肠道微生物从头合成（synthesized de novo by gut microbes）</p>
+<p>肠道微生物可以从头开始合成一些化合物，例如维生素、氨基酸、短链脂肪酸和多糖等</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="2-数据集"><a href="#2-数据集" class="headerlink" title="2. 数据集"></a>2. 数据集</h3><ul>
+<li><code>gutMGene</code>：肠道微生物和微生物代谢产物靶基因的综合数据库（论文中经过实验验证）</li>
+<li><a target="_blank" rel="noopener" href="http://bio-annotation.cn/gutmgene">数据集地址</a>    <a target="_blank" rel="noopener" href="https://academic.oup.com/nar/article/50/D1/D795/6368055">论文地址</a></li>
+<li>简介：<ul>
+<li>目的：提供人类和小鼠肠道微生物和微生物代谢产物的目标基因的资源</li>
+<li>数据构成（当前版本）：<ol>
+<li>人类中332种肠道微生物、207种微生物代谢物和223种基因之间的1331种关系</li>
+<li>小鼠中209种肠道微生物、149种微生物代谢物和544种基因之间的2349种关系</li>
+</ol>
+</li>
+<li>数据内容：关系的详细信息<ul>
+<li>肠道菌群</li>
+<li>微生物代谢物</li>
+<li>靶基因</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-其他数据集："><a href="#3-其他数据集：" class="headerlink" title="3. 其他数据集："></a>3. 其他数据集：</h3><ul>
+<li>GMrepo和gutMEGA策划并注释了人类肠道宏基因组</li>
+<li>gutMDisorder收集了经实验验证的肠道菌群与疾病或干预措施之间的关联</li>
+</ul>
+<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><ol>
+<li><p>用关键词列表搜索PubMed数据库，获取可能相关的论文，如“gut”，“bowel”，“microbe”，“metabolite”等<br>（&gt;3000篇论文）</p>
+</li>
+<li><p>筛选出了记录实验验证的论文</p>
+</li>
+<li><p>从360多篇论文中手动提取了人和小鼠中的微生物-代谢物、微生物-靶点和代谢-靶点关系</p>
+</li>
+</ol>
+<h2 id="数据内容"><a href="#数据内容" class="headerlink" title="数据内容"></a>数据内容</h2><h3 id="1-数据构成"><a href="#1-数据构成" class="headerlink" title="1. 数据构成"></a>1. 数据构成</h3><ul>
+<li><p>人类中332种肠道微生物、207种微生物代谢物和223种基因之间的1331种关系</p>
+</li>
+<li><p>小鼠中209种肠道微生物、149种微生物代谢物和544种基因之间的2349种关系</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320112847125.png" alt="image-20230320112847125"></p>
+</li>
+</ul>
+<h3 id="2-数据分布"><a href="#2-数据分布" class="headerlink" title="2. 数据分布"></a>2. 数据分布</h3><ol>
+<li><p>六大类的分布（左–Human  右–Mice）</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320113803332.png" alt="a"></p>
+</li>
+</ol>
+<h3 id="3-整体介绍"><a href="#3-整体介绍" class="headerlink" title="3. 整体介绍"></a>3. 整体介绍</h3><ul>
+<li><p>gutMGene中的每个条目都包含两个用于记录关联的部分</p>
+<ul>
+<li><p>Relationships between gut microbes, metabolites, and genes</p>
+<p>记录了肠道微生物、样品类型、底物、代谢物、基因、肠道微生物或代谢物下基因变化的描述、物种、实验方法、测量技术和基因表达实验技术的通量描述</p>
+</li>
+<li><p>Literature</p>
+<p>记录了对参考文献的详细描述</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>单个微生物相关的代谢物数量（对于一种微生物，能够产生代谢物的数量）</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320122110450.png" alt="image-20230320122110450"></p>
+<blockquote>
+<p>eg: 小鼠中有20种微生物(y)，这20种微生物中的任一种与3种代谢物有关</p>
+</blockquote>
+</li>
+<li><p>单个代谢物相关的微生物数量（对于一种代谢物，有多少种微生物与之有关）</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320122456463.png" alt="image-20230320122456463"></p>
+<blockquote>
+<p>eg：人类中有18种代谢物，这18种代谢物中的任一种代谢物与两种微生物有关</p>
+</blockquote>
+</li>
+<li><p>微生物和基因（一种微生物受多少种基因的调控）</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320124855958.png" alt="image-20230320124855958"></p>
+<blockquote>
+<p>eg：有1种微生物与34种基因有关；有4种微生物，其中的任一种与7种基因有关 </p>
+</blockquote>
+</li>
+<li><p>基因和微生物（一种基因能够调控的微生物数量）</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320124908515.png" alt="image-20230320124908515"></p>
+<blockquote>
+<p>eg：有两种基因，其中的任一种与8种微生物有关</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="4-树状数据库"><a href="#4-树状数据库" class="headerlink" title="4. 树状数据库"></a>4. 树状数据库</h3><ul>
+<li><p>按照物种分为两类：<strong>Human</strong> 和 <strong>Mouse</strong></p>
+</li>
+<li><p>每一类下细分为三个小类：GutMicrobiota, Metabolite和Gene</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320143739760.png" alt="image-20230320143739760"></p>
+</li>
+<li><p>example：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320154005003.png" alt="image-20230320154005003"></p>
+<p>包含以下信息：</p>
+<ol>
+<li><p>物种</p>
+</li>
+<li><p>Gut Microbiota (ID)：肠道菌群，可以使用ID来指代特定的菌群</p>
+</li>
+<li><p>Substrate (ID): 底物，指代代谢产物的前体物质</p>
+</li>
+<li><p>Metabolite (ID): 代谢产物，指代菌群代谢底物产生的化合物</p>
+</li>
+<li><p>Gene (ID): 基因，可以使用ID来指代特定的基因</p>
+</li>
+<li><p>Throughput: 数据处理的规模和复杂度，高通量或低通量</p>
+</li>
+<li><p>PMID: PubMed ID，文章的唯一标识符，可用于检索该文章</p>
+</li>
+<li><p>Details：给出了这个菌所能进行的一个代谢的总结（上图中的detail相同，且囊括了四种代谢反应）</p>
+</li>
+<li><p>Network：针对某一个反应</p>
+<p>结点包括：当前微生物的<strong>所有代谢产物</strong>&#x2F;基因 + 与<strong>当前反应的代谢产物</strong>&#x2F;基因有关的所有微生物&#x2F;基因</p>
+<p>eg：上面第二条数据的network：包含了Bd这个微生物有关的所有代谢产物&#x2F;基因 + 与Bile acid这个产物有关的所有微生物&#x2F;基因</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230320154041323.png" alt="image-20230320154041323"></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h2><ol>
+<li><p>高通量技术 与 低通量技术</p>
+<ul>
+<li><p>高通量技术：</p>
+<p>✨能够同时处理大量生物样本、产生大量数据的技术</p>
+<p>🎈优点在于其速度、高效性和大规模性</p>
+<p>🥚大幅提高实验的产出量和数据量，并且可以从全面的角度来研究复杂的生物系统</p>
+</li>
+<li><p>低通量技术：</p>
+<p>✨能够处理少量生物样本、产生较少数据的技术</p>
+<p>🎈优点在于其精度、可重复性和可控性</p>
+<p>🥚主要用于深入了解某个生物系统的特定方面，如基因表达、蛋白质功能和代谢组学等</p>
+</li>
+</ul>
+</li>
+</ol>
+</article>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/">分类</a><a href="/">标签</a><a href="/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/">开源库</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/">关于本站</a><a href="/">GitHub</a></div></div><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

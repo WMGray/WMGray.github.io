@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 7.2.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>MDGF-MCEC a multi-view dual attention embedding - WMGray</title>
+
+  
+    <meta name="description" content="名词解释： &#x3D;&#x3D;环状RNA&#x3D;&#x3D;（Circular RNA，简称circRNA）为生物细胞中的一类RNA，由线状RNA5’端与3’端经共价结合（反向剪接）而形成，是一种广泛存在于真核细胞中的单链RNA。环状RNA在基因表达调控、细胞周期、信号转导等生物学过程中发挥重要作用。最近的研究表明，环状RNA在许多疾病的发生和发展中也扮演着重要的角色，如癌症、心血管疾病">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MDGF-MCEC a multi-view dual attention embedding">
+<meta property="og:url" content="https://wmgray.github.io/2023/04/b822e8e5054c.html">
+<meta property="og:site_name" content="WMGray">
+<meta property="og:description" content="名词解释： &#x3D;&#x3D;环状RNA&#x3D;&#x3D;（Circular RNA，简称circRNA）为生物细胞中的一类RNA，由线状RNA5’端与3’端经共价结合（反向剪接）而形成，是一种广泛存在于真核细胞中的单链RNA。环状RNA在基因表达调控、细胞周期、信号转导等生物学过程中发挥重要作用。最近的研究表明，环状RNA在许多疾病的发生和发展中也扮演着重要的角色，如癌症、心血管疾病">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230417221947443.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230418160709.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230418162159055.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230418162710063.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230418223421220.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420131701354.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230419095934382.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420104709881.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420110054207.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420110150313.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420111041680.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420115749703.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420115843418.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420120619021.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420120523311.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420122416801.png">
+<meta property="article:published_time" content="2023-04-17T21:17:17.000Z">
+<meta property="article:modified_time" content="2024-05-13T07:49:21.859Z">
+<meta property="article:author" content="浅吟">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230417221947443.png">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="title" href="/"><div class="main" ff="title">WMGray</div><div class="sub normal cap">浅吟随笔</div><div class="sub hover cap" style="opacity:0"> hello world</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/notes/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">MDGF-MCEC a multi-view dual attention embedding</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A%EF%BC%9A"><span class="toc-text">名词解释：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%91%E6%9C%9F%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">近期方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MDGF-MCEC%E6%A8%A1%E5%9E%8B%EF%BC%9A%E5%A4%9A%E8%A7%86%E8%A7%92%E5%8F%8C%E6%B3%A8%E6%84%8F%E5%8A%9B"><span class="toc-text">MDGF-MCEC模型：多视角双注意力</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">1. 数据集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E6%8D%AE%E9%9B%86-1"><span class="toc-text">1. 数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-CircRNA-%E7%96%BE%E7%97%85%E5%85%B3%E8%81%94%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">1. CircRNA-疾病关联数据集</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%96%BE%E7%97%85%E6%95%B0%E6%8D%AE%E9%9B%86Mesh"><span class="toc-text">2. 疾病数据集Mesh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE%E9%9B%86%E6%9E%84%E5%BB%BA"><span class="toc-text">3. 数据集构建</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%A1%86%E6%9E%B6%E5%9B%BE"><span class="toc-text">2. 框架图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%B3%E7%B3%BB%E5%9B%BE"><span class="toc-text">3. 关系图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D"><span class="toc-text">4. 模型介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GCN%E6%A8%A1%E5%9D%97"><span class="toc-text">GCN模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Attention%E6%A8%A1%E5%9D%97"><span class="toc-text">Attention模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E8%A7%86%E8%A7%92%E5%8D%8F%E5%90%8C%E9%9B%86%E6%88%90%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9D%97"><span class="toc-text">多视角协同集成分类模块</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%AE%9E%E9%AA%8C%E8%A1%A8%E7%8E%B0"><span class="toc-text">5. 实验表现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%EF%BC%9A"><span class="toc-text">参考：</span></a></li></ol></div></div></widget>
+
+
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%94%9F%E7%89%A9/">生物</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-04-17T21:17:17.000Z">2023-04-17</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>MDGF-MCEC a multi-view dual attention embedding</span></h1>
+<h2 id="名词解释："><a href="#名词解释：" class="headerlink" title="名词解释："></a>名词解释：</h2><ol>
+<li><strong>&#x3D;&#x3D;环状RNA&#x3D;&#x3D;<strong>（Circular RNA，简称</strong>circRNA</strong>）为生物细胞中的一类<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/RNA">RNA</a>，由线状RNA<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%96%B9%E5%90%91%E6%80%A7_(%E5%88%86%E5%AD%90%E7%94%9F%E7%89%A9%E5%AD%A6)">5’端</a>与3’端经<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%85%B1%E5%83%B9%E9%8D%B5">共价</a>结合（反向剪接）而形成，是一种广泛存在于真核细胞中的单链RNA。环状RNA在基因表达调控、细胞周期、信号转导等生物学过程中发挥重要作用。最近的研究表明，环状RNA在许多疾病的发生和发展中也扮演着重要的角色，如癌症、心血管疾病、神经系统疾病等。&#x3D;&#x3D;环状rna可以作为一种可靠的疾病生物标志物。&#x3D;&#x3D;</li>
+</ol>
+<h2 id="近期方法："><a href="#近期方法：" class="headerlink" title="近期方法："></a>近期方法：</h2><ul>
+<li>Wang et al.：建立相似矩阵，提出了一种基于多源数据的深度卷积神经网络模型。</li>
+<li>Deepthi、Jereesh：自编码器与随机森林相结合的AE-RF模型</li>
+<li>Zheng et al.：ICDA-CGR模型。模型引入了序列信息，利用基于序列位置信息的混沌博弈表示(chaos game representation, CGR)量化了circRNA序列中的非线性关系。</li>
+<li>Wang et al.：提出了一种半监督生成对抗网络(GAN)模型，称为SGANRDA。融合了circRNA序列的自然语言特征，对GAN网络进行预训练，然后使用<strong>标记样本</strong>对网络参数进行<strong>微调</strong></li>
+<li>Li et al.：提出了基于矩阵补全的SIMCCDA，通过加速感应矩阵补全(SIMC)预测环状rna与疾病之间的关系。</li>
+<li>Wei 、Liu：提出iCircDA-MF模型，在有限的训练数据中引入基因信息，构建circrna -基因-疾病关系网络扩充数据源，并采用矩阵分解和补全技术降低特征噪声。</li>
+<li>Niu et al.：提出了采用图马尔可夫神经网络(GMNN)进行环状rna -疾病关联预测的GMNN2DC方法，将图自编码器与变分推理相结合</li>
+<li>Chen et al.：提出了RGCNCDA方法用于环状rna -疾病关联预测。该方法首先整合多相似网络，构建全局异构网络。然后，采用带重启的随机游走学习低维和高阶信息作为拓扑特征。建立了基于R-GCN编码器和DistMult解码器的预测模型进行预测。</li>
+</ul>
+<h2 id="MDGF-MCEC模型：多视角双注意力"><a href="#MDGF-MCEC模型：多视角双注意力" class="headerlink" title="MDGF-MCEC模型：多视角双注意力"></a>MDGF-MCEC模型：多视角双注意力</h2><ul>
+<li><code>多视角</code></li>
+<li><code>双注意力</code>：在信道级和空间级对特征的不同视图进行权重调整和平衡，增强了学习到的嵌入特征的识别能力。</li>
+</ul>
+<p>从不同角度利用circRNA的相似性和疾病的相似性，构建了不同的疾病关系图和circRNA关系图</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h3 id="1-数据集"><a href="#1-数据集" class="headerlink" title="1. 数据集"></a>1. 数据集</h3><p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<h3 id="1-数据集-1"><a href="#1-数据集-1" class="headerlink" title="1. 数据集"></a>1. 数据集</h3><blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>23255866cbb13b098b79454540dc9f6f1b6f0245</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="1-CircRNA-疾病关联数据集"><a href="#1-CircRNA-疾病关联数据集" class="headerlink" title="1. CircRNA-疾病关联数据集"></a>1. CircRNA-疾病关联数据集</h4><ul>
+<li><p><a target="_blank" rel="noopener" href="http://bioinfo.snnu.edu.cn/CircR2Disease/">CircR2Disease</a><br><a target="_blank" rel="noopener" href="http://bioinfo.snnu.edu.cn/CircR2Disease/">CircR2Disease</a> 包含了<strong>739</strong>个经实验验证的 circRNA–疾病关联，涉及<strong>661</strong>个 circRNA 和<strong>100</strong>种疾病<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<blockquote>
+<p>去重后，可得到 650 对 circRNA–疾病关联，涉及 585 个 circRNA 和 88 种疾病</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://bioinformatics.zju.edu.cn/Circ2Disease/browse.html">Circ2Disease</a><br>当前版本：5368 associations、237 circRNAs、217 diseases、313 miRNAs sponges、1746 miRNA targets、647 RBPs</p>
+</li>
+<li><p>circRNADisease</p>
+</li>
+</ul>
+<div class="tag-plugin note" color="blue"><div class="body"><ul><li>由于CircR2Disease数据库中已知的关联更加充分，因此本研究的实验主要在CircR2Disease数据库中进行</li><li>利用circRNADisease和Circ2Disease数据集来<mark class="tag-plugin mark" color="dark">验证</mark>模型的预测能力</li></ul></div></div>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<blockquote>
+<p>去重后，可得到 650 对 circRNA–疾病关联，涉及 585 个 circRNA 和 88 种疾病</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://bioinformatics.zju.edu.cn/Circ2Disease/browse.html">Circ2Disease</a><br>当前版本：5368 associations、237 circRNAs、217 diseases、313 miRNAs sponges、1746 miRNA targets、647 RBPs<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>23255866cbb13b098b79454540dc9f6f1b6f0245</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-疾病数据集Mesh"><a href="#2-疾病数据集Mesh" class="headerlink" title="2. 疾病数据集Mesh"></a>2. 疾病数据集Mesh</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://www.nlm.nih.gov/mesh/meshhome.html">Mesh</a><br>该数据库以基于医学和生物学关联的有向无环图表示疾病。它包含4818种疾病和疾病之间的11648种关联。</li>
+</ul>
+<h4 id="3-数据集构建"><a href="#3-数据集构建" class="headerlink" title="3. 数据集构建"></a>3. 数据集构建</h4><ul>
+<li>使用 CircR2Disease 数据库中650对已知的 circRNA-疾病关联作为<strong>阳性集</strong>。</li>
+<li>在 circrna 与疾病之间随机选取650对不在阳性集中的 circRNA-disease 作为<strong>阴性集</strong></li>
+</ul>
+<blockquote>
+<p>错误率：$650 ÷ (585 × 88)≈1.26$</p>
+</blockquote>
+<h3 id="2-框架图"><a href="#2-框架图" class="headerlink" title="2. 框架图"></a>2. 框架图</h3><div class="tag-plugin image"><div class="image-bg" style="background:white;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230417221947443.png" alt="模型流程图" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">模型流程图</span></div></div>
+
+<div class="tag-plugin note" color="green" child="tabs"><div class="title"><strong>模型流程图</strong></div><div class="body"><div class="tag-plugin folders" ><details class="folder" index="0"><summary><span>Part A</span></summary><div class="body"><p><code>数据源模块</code>：包含三种数据库：疾病数据库、circRNA 数据库和 circRNA–疾病数据库。</p></div></details><details class="folder" index="1"><summary><span>Part B</span></summary><div class="body"><p><code>关系构建模块</code>：通过不同的相似度度量生成<strong>疾病关系图</strong>和<strong>circRNA关系图</strong></p></div></details><details class="folder" index="2"><summary><span>Part C</span></summary><div class="body"><p><code>图嵌入学习模块</code>：用于学习基于 <code>多视图双注意力的GCN</code> 的两种关系图的嵌入特征</p></div></details><details class="folder" index="3"><summary><span>Part D</span></summary><div class="body"><p><code>分类模块</code>：同时使用多视图和集成学习</p></div></details></div></div></div>
+
+<h3 id="3-关系图"><a href="#3-关系图" class="headerlink" title="3. 关系图"></a>3. 关系图</h3><ul>
+<li><p>构建 Circ2Disease 关系的临界矩阵，大小为 $585 * 88$，对应585个 circRNA 和88种疾病</p>
+</li>
+<li><p>构建两个疾病关系图和两个 CircRNA 关系图  </p>
+<ul>
+<li><p>基于<strong>语义相似度</strong>的疾病关系图<br>$$<br>G_{dss} &#x3D; (V_{dss}, E_{dss})<br>$$</p>
+</li>
+<li><p>基于<strong>疾病 GIP 核相似性</strong>的疾病关系图<br>$$<br>G_{dgs} &#x3D; (V_{dgs}, E_{dgs})<br>$$</p>
+</li>
+<li><p>基于<strong>功能相似性</strong>的关系图<br>$$<br>G_{cfs} &#x3D; (V_{cfs}, E_{cfs})<br>$$</p>
+</li>
+<li><p>基于<strong>功能相似性</strong>的 CircRNA 关系图<br>$$<br>G_{cgs} &#x3D; (V_{cgs}, E_{cgs})<br>$$</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/20230418160709.png" alt="四种关系图" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">四种关系图</span></div></div>
+
+<h3 id="4-模型介绍"><a href="#4-模型介绍" class="headerlink" title="4. 模型介绍"></a>4. 模型介绍</h3><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230418162159055.png" alt="四种关系图上的多视角双注意力GCN" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">四种关系图上的多视角双注意力GCN</span></div></div>
+
+<h4 id="GCN模块"><a href="#GCN模块" class="headerlink" title="GCN模块"></a>GCN模块</h4><div class="tag-plugin quot"><p class="content" type="text">以CircRNA的GIP核关系图为例</p></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230418162710063.png" alt="双注意力GCN" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">双注意力GCN</span></div></div>
+
+<p>$A_c$是$C_{cgs}$的邻接矩阵</p>
+<p>$V_c$是节点集，$N_c$是节点个数，$D_c$是embedding的维度大小，$C_c$为通道数，默认为2。整个图上节点的特征可以表示为矩阵$X_g \in R^{N_c \times D_c}$,其中$X[i] \in R^{D_c} i \in {1, 2, ……, N_c}$ 为第 $i$ 个节点的嵌入</p>
+<p>$$<br>X_\mathbf{g}^{(t)}&#x3D;\hat{S}<em>\mathbf{c}^{-1&#x2F;2}\hat{A}<em>\mathbf{c}\hat{S}</em>{\mathbf{c}}^{-1&#x2F;2}X_\mathsf{g}^{(t-1)}\Theta^{(t-1)}<br>$$<br>$X_g \in R^{N_c \times D_c}$, $\hat{A}</em>{c}&#x3D;A_{c}+I_{c},$ $[\hat{S}<em>\mathsf{c}]</em>{ii}<del>&#x3D;</del>\sum_{j}[\hat{A}_\mathbf{c}]_j$, $\Theta^{\left(t-1\right)}\in R^{Dc\times Dc}$是一个可学习的矩阵</p>
+<p>为了在卷积后获得更多的信息，在上图所示的模块中，不仅保留了第一层的嵌入，还保留了第二层的嵌入</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230418223421220.png" fancybox="true"/></div></div>
+
+<p>经过GCN模块后，可得到一个嵌入 $X_g &#x3D; {X_g^{(1)}; X_g^{(2)} }$$where X_{g} \in R^{2 \times N_c \times D_c}$</p>
+<h4 id="Attention模块"><a href="#Attention模块" class="headerlink" title="Attention模块"></a>Attention模块</h4><div class="tag-plugin quot"><p class="content" type="text">Channel Attention Block</p></div>
+
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420131701354.png" alt="Channel Attention Block" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">Channel Attention Block</span></div></div>
+
+<p>​	<mark class="tag-plugin mark" color="red">输入</mark>  ：$X_g, 2 \times D_c \times N_c$    </p>
+<p>​	<mark class="tag-plugin mark" color="blue">处理:</mark>   </p>
+<ol>
+<li>对输入分别进行平均池化&#x2F;最大池化得到$X_g^{avg} \in R^{C_c}, X_g^{max} \in R^{C_c}$, 形状：$R^{2 \times N_c \times D_c} –&gt; R^{2 \times 1 \times 1}$</li>
+<li>再输入到MLP中得到两个输出</li>
+<li>经过MLP的输出相加再经过激活函数便可得到Channel Attention Block的输出$W_{channel} (X_g )$，大小为$R^{C_c}$,即2</li>
+</ol>
+<p>$$<br>\begin{gathered}<br>W_{channel} (X_g )&#x3D;\sigma(MLP{(AvgPool)}(X_{\mathsf{g}}))+{MLP}{(MaxPool}{(X_g)))}) \<br>&#x3D;\sigma(MLP(X_g^{avg})+MLP  {(X_g)}^{\mathrm{max}}))<br>\end{gathered}<br>$$</p>
+<ol start="4">
+<li><p>对$W_g$进行维度扩充，得到$M_g, M_g \in R^ {2 \times N_c \times 2}$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.....</span><br><span class="line">scale = F.sigmoid( channel_att_sum ).unsqueeze(<span class="number">2</span>).unsqueeze(<span class="number">3</span>).expand_as(x)</span><br><span class="line"><span class="keyword">return</span> x * scale</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>​	<mark class="tag-plugin mark" color="green">注意力得分:</mark>  $M_g,  2 \times N_c \times 2$</p>
+<p>​	<mark class="tag-plugin mark" color="yellow">输出:</mark>  $X_g^{‘}&#x3D;M_{channel}(X_g)\otimes X_g,$</p>
+<div class="tag-plugin quot"><p class="content" type="text">Spatial Attention Block</p></div>  
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230419095934382.png" alt="Spatial Attention Block" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">Spatial Attention Block</span></div></div>
+
+<p>​	<mark class="tag-plugin mark" color="red">输入:</mark> ${X_g}^{‘},  2 \times D_c \times N_c$  </p>
+<p>​	<mark class="tag-plugin mark" color="blue">处理:</mark> </p>
+<ol>
+<li>对$X_g^{‘}$进行平均池化和最大池化，得到$X_g^{‘avg}$ 和 $X_g^{‘max’}$,形状为$R^{N_c \times D_c} $</li>
+<li>对池化后的输出连接后进行卷积操作，获取其空间上的联系,得到$W_{spatial}(X_g^{‘}), W_{spatial}(X_g^{‘}) \in R^{N_c \times D_c}$</li>
+</ol>
+<p>$$<br>\begin{gathered}<br>W_{spatial}(X_g^{‘})&#x3D; \sigma (f_{conv}([AvgPool(X_g^{‘});{MaxPool}(X_g^{‘}])) \<br>&#x3D;\sigma(f_{conv} ({X_g^{‘avg};{X_g^{‘max}}})<br>\end{gathered}<br>$$</p>
+<p>​	<mark class="tag-plugin mark" color="green">注意力得:</mark>  $M_{spatial}(X_g^{‘}) \in R^{C_c \times N_ c \times D_c}$  </p>
+<h1 id="​-X-g-‘’-M-spatial-X-g-‘-otimes-X-g-‘"><a href="#​-X-g-‘’-M-spatial-X-g-‘-otimes-X-g-‘" class="headerlink" title="​	  $X_g^{‘’}&#x3D;M_{spatial}(X_g^{‘})\otimes X_g^{‘},$"></a>​	<mark class="tag-plugin mark" color="yellow">输出:</mark>  $X_g^{‘’}&#x3D;M_{spatial}(X_g^{‘})\otimes X_g^{‘},$</h1><p>​	<mark class="tag-plugin mark" color="red">输入</mark>  ：$X_g, 2 \times N_c \times D_c$    </p>
+<p>​	<mark class="tag-plugin mark" color="blue">处理:</mark>   怎么处理</p>
+<p>​	<mark class="tag-plugin mark" color="green">输出:</mark>  ${X_g}^{‘},  2 \times N_c \times D_c$   </p>
+<div class="tag-plugin quot"><p class="content" type="text">Spatial Attention Block</p></div>  
+
+<p>​	<mark class="tag-plugin mark" color="red">输入:</mark> ${X_g}^{‘},  2 \times N_c \times D_c$  </p>
+<p>​	<mark class="tag-plugin mark" color="blue">处理:</mark> </p>
+<p>​	<mark class="tag-plugin mark" color="green">输出:</mark>  ${X_g}^{‘’},  2 \times N_c \times D_c$  </p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>23255866cbb13b098b79454540dc9f6f1b6f0245</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="多视角协同集成分类模块"><a href="#多视角协同集成分类模块" class="headerlink" title="多视角协同集成分类模块"></a>多视角协同集成分类模块</h4><div class="tag-plugin quot"><p class="content" type="text">传统的方法</p></div>
+
+<p>传统的方法通常将CircRNA和疾病的多视角的特征连接起来，然后训练分类器，<a class="tag-plugin tag" color="warning">对多视图信息的利用不足</a>。</p>
+<div class="tag-plugin quot"><p class="content" type="text">本文提出的方法</p></div>
+
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420104709881.png" alt="多视角协同集成分类模块" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">多视角协同集成分类模块</span></div></div>
+
+<ol>
+<li><p>从不同的角度获得的进行<mark class="tag-plugin mark" color="blue">随机组合</mark>，进而获得不同的特征集</p>
+</li>
+<li><p>针对circRNA特征和疾病特征的不同组合，训练不同的XGBoost (Extreme Gradient Boosting) classifiers</p>
+<blockquote>
+<p>针对circRNA和疾病特征的不同组合构建了9个不同的视图</p>
+</blockquote>
+</li>
+<li><p>在这9个分类器的基础上，使用<mark class="tag-plugin mark" color="dark">投票</mark>机制</p>
+</li>
+</ol>
+<h3 id="5-实验表现"><a href="#5-实验表现" class="headerlink" title="5. 实验表现"></a>5. 实验表现</h3><ol>
+<li><p>数据集：CircR2Disease		实验方法：五折交叉验证</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420110054207.png" alt="模型在CircR2Disease上的表现" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">模型在CircR2Disease上的表现</span></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420110150313.png" alt="ROC曲线" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">ROC曲线</span></div></div>
+</li>
+<li><p>数据集： Circ2Disease、CircRNADisease  实验方法：五折交叉验证</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420111041680.png" alt="模型在Circ2Disease上的表现" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">模型在Circ2Disease上的表现</span></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420115749703.png" alt="模型在CircRNADisease上的表现" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">模型在CircRNADisease上的表现</span></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420115843418.png" alt="模型在两个数据集上的ROC曲线" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">模型在两个数据集上的ROC曲线</span></div></div>
+</li>
+<li><p>不同视角的分类器性能</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420120619021.png" alt="不同组合视角的分类器性能" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">不同组合视角的分类器性能</span></div></div>
+</li>
+<li><p>注意力消融实验</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420120523311.png" alt="注意力消融实验" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">注意力消融实验</span></div></div></li>
+</ol>
+<div class="tag-plugin quot"><p class="content" type="text">实验验证</p></div>
+
+<div class="tag-plugin note" color="blue"><div class="body"><p>预测的CircRNA–疾病关联存在文献支持，不存在文献支持的可能会是潜在的关联，待后续生物验证</p></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230420122416801.png" alt="模型预测的circRNA-disease关联（Top 20）% ### 6. 局限性 1. 标注的{% mark 数据有限" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">模型预测的circRNA-disease关联（Top 20）% ### 6. 局限性 1. 标注的{% mark 数据有限</span></div></div>，无法增强和评估所提出方法的泛化能力
+
+<ol start="2">
+<li><p>在本方法中，<mark class="tag-plugin mark" color="warning">将关联未知的样本当作负样本进行训练</mark>。</p>
+<p>这是一种可行的策略，但它可能导致CircRNA–疾病对的错误标记，从而导致训练过程的偏差</p>
+<div class="tag-plugin note" color="green"><div class="body"><p>一种可能的解决方案是引入正无标签学习策略，该策略构建的分类器只有正样例和未标记样例，而没有负样例</p></div></div></li>
+</ol>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>23255866cbb13b098b79454540dc9f6f1b6f0245</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%92%B0%E7%8B%80RNA">环状RNA</a></li>
+</ol>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>2. </p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>23255866cbb13b098b79454540dc9f6f1b6f0245</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/05/455b73144eaa.html">Hello World</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2023/04/1ae618d3aed6.html">nvtop的安装</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/">分类</a><a href="/">标签</a><a href="/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/">开源库</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/">关于本站</a><a href="/">GitHub</a></div></div><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

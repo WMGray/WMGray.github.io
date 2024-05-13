@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 7.2.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>分类：前端学习 - WMGray</title>
+
+  
+    <meta name="description" content="1. 基本知识 网站是指因特网上根据一定的规则，使用HTML等制作的用于展示特定内容相关的&#x3D;&#x3D;网页的集合&#x3D;&#x3D;  网页是网站的一页， 通常是HTML格式的文件， 它主要通过浏览器来阅读  网页是网站的基本元素 green, 通常由文字、图片、视频等组成。通常我们看到的网页是以.html或者.htm为后缀的文件，俗称为HTML文件 green   网页是由网页元">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WMGray">
+<meta property="og:url" content="https://wmgray.github.io/2024/05/f50eaff7f451.html">
+<meta property="og:site_name" content="WMGray">
+<meta property="og:description" content="1. 基本知识 网站是指因特网上根据一定的规则，使用HTML等制作的用于展示特定内容相关的&#x3D;&#x3D;网页的集合&#x3D;&#x3D;  网页是网站的一页， 通常是HTML格式的文件， 它主要通过浏览器来阅读  网页是网站的基本元素 green, 通常由文字、图片、视频等组成。通常我们看到的网页是以.html或者.htm为后缀的文件，俗称为HTML文件 green   网页是由网页元">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230907003759705.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230910231028542.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230914000642744.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/202310111826824.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/202310111826490.png">
+<meta property="article:published_time" content="2024-05-13T07:49:21.843Z">
+<meta property="article:modified_time" content="2024-05-13T07:49:21.843Z">
+<meta property="article:author" content="浅吟">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230907003759705.png">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="title" href="/"><div class="main" ff="title">WMGray</div><div class="sub normal cap">浅吟随笔</div><div class="sub hover cap" style="opacity:0"> hello world</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/notes/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="toc-text">1. 基本知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-HTML"><span class="toc-text">2. HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E6%A0%87%E7%AD%BE"><span class="toc-text">1. 基本结构标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-HTML%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="toc-text">2. HTML常用标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E6%A0%87%E7%AD%BE"><span class="toc-text">标题标签&lt;h1&gt; - &lt;h6&gt;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%87%E7%AD%BE%E5%92%8C%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE"><span class="toc-text">段落标签和换行标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="toc-text">文本格式化标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%92%8C-%E6%A0%87%E7%AD%BE"><span class="toc-text">&lt;div&gt; 和 &lt;sapn&gt; 标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B7%AF%E5%BE%84"><span class="toc-text">图像标签和路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE"><span class="toc-text">超链接标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-HTML%E4%B8%AD%E7%9A%84%E6%B3%A8%E9%87%8A%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%AD%97%E7%AC%A6"><span class="toc-text">3. HTML中的注释和基本字符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="toc-text">特殊字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE"><span class="toc-text">表格标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="toc-text">列表标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE"><span class="toc-text">表单标签</span></a></li></ol></li></ol></li></ol></div></div></widget>
+
+
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/">前端学习</a></div><div id="post-meta">发布于&nbsp;<time datetime="2024-05-13T07:49:21.843Z">2024-05-13</time></div></div>
+
+<article class='md-text content post'>
+
+<h2 id="1-基本知识"><a href="#1-基本知识" class="headerlink" title="1. 基本知识"></a>1. 基本知识</h2><ol>
+<li><p><code>网站</code>是指因特网上根据一定的规则，使用HTML等制作的用于展示特定内容相关的&#x3D;&#x3D;网页的集合&#x3D;&#x3D;</p>
+</li>
+<li><p><code>网页</code>是网站的<code>一页</code>， 通常是<strong>HTML格式的文件</strong>， 它主要通过浏览器来阅读</p>
+<blockquote>
+<p>网页是网站的<mark class="tag-plugin mark" >基本元素 green</mark>, 通常由文字、图片、视频等组成。通常我们看到的网页是以<code>.html</code>或者<code>.htm</code>为后缀的文件，俗称为<mark class="tag-plugin mark" >HTML文件 green</mark></p>
+</blockquote>
+<blockquote>
+<p>网页是由<code>网页元素</code>组成的，这些元素是利用<code>html标签</code>描述，然后通过浏览器解析来显示</p>
+</blockquote>
+</li>
+<li><p>**<code>HTML</code>**：超文本标记语言(Hyper Text Markup Language)，是用来 <strong>描述网页</strong> 的一种语言，由多种标签组成</p>
+<blockquote>
+<p><strong>不是编程语言，而是标记语言</strong></p>
+</blockquote>
+<blockquote>
+<p>所谓<code>超文本</code>：</p>
+<ol>
+<li>超越了文本限制，可以添加音频、图片、视频等内容</li>
+<li>超链接文本，可以从一个文件跳转到另一个文件，与世界各地主机的文件相连</li>
+</ol>
+</blockquote>
+</li>
+<li><p><code>浏览器内核</code>：<mark class="tag-plugin mark" >渲染引擎 green</mark>，负责读取网页内容，整理讯息，计算网页的显示方式并显示页面</p>
+</li>
+<li><p>**<code>Web标准</code>**：是由<code>W3C</code>组织和其他标准组织制定的&#x3D;&#x3D;一系列标准的集合&#x3D;&#x3D;</p>
+</li>
+<li><p><code>Web标准的构成</code>：结构(Structure)、表现(Presentation) 和 行为(Behavior)</p>
+<table>
+<thead>
+<tr>
+<th>标准</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>结构</td>
+<td>结构用于对<strong>网页元素</strong>进行<strong>整理和分类</strong></td>
+</tr>
+<tr>
+<td>表现</td>
+<td>表现用于设置网页元素的<strong>版式、颜色、大小等外观样式</strong>，主要指的是CSS</td>
+</tr>
+<tr>
+<td>行为</td>
+<td>行为指网页模型的<strong>定义及交互</strong>的编写</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h2 id="2-HTML"><a href="#2-HTML" class="headerlink" title="2. HTML"></a>2. HTML</h2><div class="tag-plugin note" color="green" child="tabs"><div class="title"><strong>HTML语法规范</strong></div><div class="body"><ol><li><p>所有的标签都必须包含在<code>&lt; &gt;</code>中</p></li><li><p>标签都是<strong>成对出现</strong>的，称为<code>双标签</code>， 即<code>开始标签</code> 和 <code>结束标签（&quot;/&quot;）</code></p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span> <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>也有<code>单标签</code>： </p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br></pre></td></tr></table></figure></li></ol></div></div>
+
+<div class="tag-plugin quot"><p class="content" type="text">标签关系</p></div>
+
+<ul>
+<li><p>包含关系（父子关系）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span> <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>并列关系</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="1-基本结构标签"><a href="#1-基本结构标签" class="headerlink" title="1. 基本结构标签"></a>1. 基本结构标签</h3><mark class="tag-plugin mark" color="blue">每个网页都会有一个基本的结构标签，也称为`骨架标签`</mark>
+
+<table>
+<thead>
+<tr>
+<th>标签名</th>
+<th>定义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;html&gt; &lt;&#x2F;html&gt;</td>
+<td><strong>HTML标签</strong></td>
+<td>根标签，页面中最大的标签</td>
+</tr>
+<tr>
+<td>&lt;head&gt;&lt;&#x2F;head&gt;</td>
+<td>文档的<strong>头部</strong></td>
+<td>在head标签中必须要设置<strong>title</strong></td>
+</tr>
+<tr>
+<td>&lt;title&gt;&lt;&#x2F;title&gt;</td>
+<td>文档的<strong>标题</strong></td>
+<td>让页面有一个属于自己的网页标题</td>
+</tr>
+<tr>
+<td>&lt;body&gt;&lt;&#x2F;body&gt;</td>
+<td>文档的<strong>主体</strong></td>
+<td>元素包含文档的所有内容</td>
+</tr>
+</tbody></table>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230907003759705.png" alt="结构标签" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">结构标签</span></div></div> 
+
+<div class="tag-plugin note" color="blue" child="tabs"><div class="title"><strong>VSCode工具生成骨架结构新增代码</strong></div><div class="body"><ol><li><p><code>&lt;!DOCTYPE&gt;</code>标签：文档类型声明，声明HTML版本</p><blockquote><p>必须写在文件第一行，声明标签—不属于HTML标签</p></blockquote></li><li><p><code>lang</code>语言：定义当前文档显示的语言，eg：zh-CN、en、fr</p></li><li><p><code>charset</code>字符集：在<head>标签内，可以通过<meta>标签的charset 属性来规定 HTML文档应该使用哪种字符编码。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ol></div></div>
+
+
+
+<h3 id="2-HTML常用标签"><a href="#2-HTML常用标签" class="headerlink" title="2. HTML常用标签"></a>2. HTML常用标签</h3><a class="tag-plugin tag" color="warning">！！！根据标签的语义，在合适的地方给一个最为合理的标签，可以让页面结构更清晰！！！</a>
+
+<h4 id="标题标签"><a href="#标题标签" class="headerlink" title="标题标签&lt;h1&gt; - &lt;h6&gt;"></a>标题标签&lt;h1&gt; - &lt;h6&gt;</h4><p>HTML提供了6个等级的网页标题，从H1 — H6。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题一共六级选，<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>文字加粗一行显。<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>由大到小依次减，<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>从重到轻随之变。<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h5</span>&gt;</span>语法规范书写后，<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h6</span>&gt;</span>具体效果刷新见。<span class="tag">&lt;/<span class="name">h6</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>特点:</strong></p>
+<ol>
+<li>加了标题的文字会变的加粗，字号也会依次变大。</li>
+<li>一个标题独占一行</li>
+</ol>
+<h4 id="段落标签和换行标签"><a href="#段落标签和换行标签" class="headerlink" title="段落标签和换行标签"></a>段落标签和换行标签</h4><p><code>&lt;p&gt; &lt;/p&gt;</code>：段落标签，将HTML文档分成若干段落 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">环状RNA（Circular RNA，简称circRNA）为生物细胞中的一类RNA，由线状RNA5’端与3’端经共价结合（反向剪接）而形成，是一种广泛存在于真核细胞中的单链RNA。环状RNA在基因表达调控、细胞周期、信号转导等生物学过程中发挥重要作用。</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">最近的研究表明，环状RNA在许多疾病的发生和发展中也扮演着重要的角色，如癌症、心血管疾病、神经系统疾病等。环状rna可以作为一种可靠的疾病生物标志物。</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>特点:</strong></p>
+<ol>
+<li>文本在一个段落中会根据浏览器窗口的大小自动换行</li>
+<li>段落和段落之间保有空隙</li>
+</ol>
+<br />
+
+<p><code>\&lt;br /&gt;</code>：换行标签，强制换行</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">环状RNA（Circular RNA，简称circRNA）为生物细胞中的一类RNA，</span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">由线状RNA5’端与3’端经共价结合（反向剪接）而形成，是一种广泛存在于真核细胞中的单链RNA。环状RNA在基因表达调控、细胞周期、信号转导等生物学过程中发挥重要作用。</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>特点:</strong></p>
+<ol>
+<li>&lt;br&#x2F;&gt;是个单标签</li>
+<li>&lt;br&#x2F;&gt;标签只是简单地开始新的一行，跟段落不一样，段落之间会插入一些垂直的间距</li>
+</ol>
+<h4 id="文本格式化标签"><a href="#文本格式化标签" class="headerlink" title="文本格式化标签"></a>文本格式化标签</h4><p>  突出重要性，比普通文字更重要</p>
+<table>
+<thead>
+<tr>
+<th>语义</th>
+<th>标签</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>加粗</td>
+<td>**&lt;strong&gt;&lt;&#x2F;strong&gt;**或者&lt;b&gt;&lt;&#x2F;b&gt;</td>
+</tr>
+<tr>
+<td>倾斜</td>
+<td>**&lt;em&gt;&lt;&#x2F;em&gt;**或者  &lt;i&gt;&lt;&#x2F;i&gt;</td>
+</tr>
+<tr>
+<td>删除线</td>
+<td>**&lt;del&gt;&lt;&#x2F;del&gt;**或者&lt;s&gt;&lt;&#x2F;s&gt;</td>
+</tr>
+<tr>
+<td>下划线</td>
+<td>**&lt;ins&gt;&lt;&#x2F;ins&gt;**或者&lt;u&gt;&lt;&#x2F;u&gt;</td>
+</tr>
+</tbody></table>
+<h4 id="和-标签"><a href="#和-标签" class="headerlink" title="&lt;div&gt; 和 &lt;sapn&gt; 标签"></a>&lt;div&gt; 和 &lt;sapn&gt; 标签</h4><p><code>\&lt;div&gt; </code>和<code> \&lt;sapn&gt;</code> 标签是<code>没有语义</code>的，只是一个盒子，用于装内容</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>这是内容1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>这是内容2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>div – division，表示分割、分区</p>
+<p>span 意为跨度、跨距</p>
+</blockquote>
+<p><strong>特点:</strong></p>
+<ol>
+<li>&lt;div&gt;标签用来布局，但是现在一行只能放一个&lt;div&gt;。大盒子</li>
+<li>&lt;span&gt;标签用来布局，一行上可以多个&lt;span&gt;。小盒子</li>
+</ol>
+<h4 id="图像标签和路径"><a href="#图像标签和路径" class="headerlink" title="图像标签和路径"></a>图像标签和路径</h4><div class="tag-plugin quot"><p class="content" type="text">图像标签</p></div>
+
+<p><code>&lt;img&gt;</code>，单标签，用于定义HTML页面中的图像</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;data/106184969_p0.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<a class="tag-plugin tag" color="warning">`<src>`</a>是`<img>`标签的<a class="tag-plugin tag" color="green">必备属性</a>，用于`指定图像文件的路径和文件名`
+</blockquote>
+<p>图片标签的其他属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>src</td>
+<td>图片路径</td>
+<td>必须属性</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>文本</td>
+<td>替换文本。图像不能显示的文字</td>
+</tr>
+<tr>
+<td>title</td>
+<td>文本</td>
+<td>提示文本。鼠标放到图像上，显示的文字</td>
+</tr>
+<tr>
+<td>width</td>
+<td>像素</td>
+<td>设置图像的宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>像素</td>
+<td>设置图像的高度</td>
+</tr>
+<tr>
+<td>border</td>
+<td>像素</td>
+<td>设置图像的边框粗细</td>
+</tr>
+</tbody></table>
+<a class="tag-plugin tag" color="warning">图像标签属性注意点:</a>
+
+<ol>
+<li>图像标签可以拥有多个属性，必须写在标签名的后面</li>
+<li>属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格分开</li>
+<li>属性采取键值对的格式，即key&#x3D;“value”的格式，属性&#x3D;“属性值”</li>
+</ol>
+<p><strong>路径：</strong></p>
+<ul>
+<li><p>相对路径：相对于HTML页面的位置</p>
+<table>
+<thead>
+<tr>
+<th>相对路径分类</th>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>同一级路径</td>
+<td></td>
+<td>图像文件位于HTML文件同一级 如&lt;img src&#x3D;”baidu.gif” &#x2F;&gt;</td>
+</tr>
+<tr>
+<td>下一级路径</td>
+<td>&#x2F;</td>
+<td>图像文件位于HTML文件下一级 如&lt;img src&#x3D;”images&#x2F;baidu.gif” &#x2F;&gt;。</td>
+</tr>
+<tr>
+<td>上一级路径</td>
+<td>..&#x2F;</td>
+<td>图像文件位于HTML文件上一级 如&lt;img src&#x3D;”..&#x2F;baidu.gif” &#x2F;&gt;</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>绝对路径：指目录下的绝对位置，<strong>通常是从盘符开始的路径</strong></p>
+</li>
+</ul>
+<h4 id="超链接标签"><a href="#超链接标签" class="headerlink" title="超链接标签"></a>超链接标签</h4><p><code>&lt;a&gt;</code> 标签用于定义<strong>超链接</strong>，作用是<u>从 一个页面链接到另一个页面</u></p>
+<div class="tag-plugin quot"><p class="content" type="text">超链接的语法格式</p></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;跳转目标&quot;</span> <span class="attr">target</span>=<span class="string">&quot;目标窗口的弹出方式&quot;</span> &gt;</span> 文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>href</td>
+<td>指定链接的url地址，<strong>必须属性</strong>，当为标签应用href属性时，就具有了超链接功能</td>
+</tr>
+<tr>
+<td>target</td>
+<td>用于指定链接页面的打开方式，其中<code>_self</code>为默认值，当前窗口打开，<code>_blank</code>为在新窗口中打开</td>
+</tr>
+</tbody></table>
+<div class="tag-plugin quot"><p class="content" type="text">超链接的分类</p></div>
+
+<ol>
+<li><p><code>外部链接</code>：eg： &lt;a href&#x3D;”<a target="_blank" rel="noopener" href="http://www.baidu.com/">http://www.baidu.com</a>“ target&#x3D;”_blank”&gt;1. 外部链接 – 百度 &lt;&#x2F;a&gt;</p>
+</li>
+<li><p><code>内部链接</code>：网站内部页面之间的相互链接，直接链接内部页面名称即可，eg：&lt;a href&#x3D;”体育新闻.html” target&#x3D;”_blank”&gt;2. 内部链接 – 体育新闻 &lt;&#x2F;a&gt;</p>
+</li>
+<li><p><code>空链接</code>：没有确定链接目标，eg：&lt;a href&#x3D;”#” target&#x3D;”_blank”&gt;3. 空链接 – 首页&lt;&#x2F;a&gt;</p>
+</li>
+<li><p><code>下载链接</code>：如果<code>href</code>地址是一个<strong>文件或者压缩包</strong>（exe或者zip 等压缩包），会下载这个文件</p>
+</li>
+<li><p><code>网页链接元素</code>：在网页中的<u>各种网页元素</u>，如文本，图像等</p>
+</li>
+<li><p><code>锚点链接</code>：快速<strong>定位到页面</strong>中的某个<strong>位置</strong></p>
+<blockquote>
+<p>在链接文本的<code>href</code>属性中，设置属性值为 <mark class="tag-plugin mark" color="red">#名字</mark>的形式，eg：&lt;a href&#x3D;”#星期四”, target&#x3D;”_blank”&gt;6. 锚点链接 – 星期四&lt;&#x2F;a&gt;</p>
+<p>找到<strong>目标位置标签</strong>，里面添加一个<code>id</code>属性，值为刚才的<mark class="tag-plugin mark" color="red">名字</mark>，eg：&lt;p id&#x3D;”星期四”&gt;明天星期四、、&lt;&#x2F;p&gt;</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;跳转目标&quot;</span> <span class="attr">target</span>=<span class="string">&quot;目标窗口的弹出方式&quot;</span> &gt;</span> 文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>1. 外部链接<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.baidu.com&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>1. 外部链接 -- 百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>2. 内部链接<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;体育新闻.html&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>2. 内部链接 -- 体育新闻 <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>3. 空连接 # <span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>3. 空链接 -- 首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>4. 下载链接<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;data/106184969_p0.zip&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>4. 下载链接 -- 文件<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>5. 网页元素链接<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.baidu.com&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;data/106184969_p0.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;图片显示错误&quot;</span>, <span class="attr">height</span>=<span class="string">&quot;128&quot;</span>, <span class="attr">width</span>=<span class="string">&quot;72&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>6. 锚点链接<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#星期四&quot;</span>, <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>6. 锚点链接 -- 星期四<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;星期四&quot;</span>&gt;</span>明天星期四<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="3-HTML中的注释和基本字符"><a href="#3-HTML中的注释和基本字符" class="headerlink" title="3. HTML中的注释和基本字符"></a>3. HTML中的注释和基本字符</h3><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>HTML中的注释以 <code>&lt;!--</code>开头，以<code>--&gt;</code>结尾</p>
+<h4 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h4><p>在 HTML页面中，一些特殊的符号很难或者不方便直接使用，此时我们就可以使用下面的字符来替代。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230910231028542.png" alt="特殊字符" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">特殊字符</span></div></div>
+
+<h4 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h4><p><code>表格</code>主要用于<strong>显示、展示数据</strong></p>
+ <a class="tag-plugin tag" color="red">表格的基本语法</a>
+
+<ul>
+<li><p>&lt;table&gt; &lt;&#x2F;table&gt; 用于定义表格</p>
+</li>
+<li><p>&lt;tr&gt;&lt;&#x2F;tr&gt;用于<strong>定义行</strong>，必须嵌套在&lt;table&gt; &lt;&#x2F;table&gt; 中</p>
+</li>
+<li><p>&lt;td&gt;&lt;&#x2F;td&gt;用于<strong>定义单元格</strong>，需嵌套在&lt;tr&gt;&lt;&#x2F;tr&gt;中</p>
+</li>
+<li><p>字母td指表格数据(table data)，即数据单元格的内容</p>
+</li>
+<li><p><code>表头单元格标签</code>：&lt;th&gt;&lt;&#x2F;th&gt;，文本<strong>加粗</strong><u>居中</u>显示</p>
+<blockquote>
+<th>标签表示HTML表格的表头部分(table head 的缩写)</blockquote>
+</li>
+</ul>
+<div class="tag-plugin quot"><p class="content" type="text">表格属性</p></div>
+
+<p>通常使用CSS来设置表格属性，表格标签属性基本不常用</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/image-20230914000642744.png" alt="表格属性标签" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">表格属性标签</span></div></div> 
+
+<a class="tag-plugin tag" color="warning" href="table`中去">这些属性要写到表格标签`</a>
+
+<div class="tag-plugin quot"><p class="content" type="text">表格结构标签</p></div>
+
+<p>表格可以分为<code>表格头部</code>和<code>表格主体</code>两大部分</p>
+<p>表格头部：&lt;thead&gt;&lt;&#x2F;thead&gt;， 内部必须有&lt;tr&gt;标签</p>
+<p>表格主体：&lt;tbody&gt;&lt;&#x2F;tbody&gt;</p>
+<a class="tag-plugin tag" color="red">合并单元格</a>
+
+<ol>
+<li><p>合并单元格方式</p>
+<ul>
+<li>跨行合并，rowspan&#x3D;”合并单元格的个数”</li>
+<li>跨列合并，colspan&#x3D;”合并单元格的个数”</li>
+</ul>
+</li>
+<li><p>目标单元格（写合并代码）</p>
+<ul>
+<li><p>若是跨行合并，写在最上侧</p>
+</li>
+<li><p>若是跨列合并，写在最左侧</p>
+<blockquote>
+<p>注意删除多余的单元格</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h4><blockquote>
+<p>列表是用来布局的</p>
+</blockquote>
+<p>根据使用情景不同，可分为</p>
+<ul>
+<li><p>无序列表</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>无序列表的各个列表项之间<strong>没有顺序等级</strong>之分，是并列的</li>
+<li>&lt;ul&gt;之间只能嵌套&lt;li&gt;，<strong>不允许</strong>嵌套<u>其他标签</u>或者<u>文字</u></li>
+<li>&lt;li&gt;之间相当于一个容器，可以嵌套任何元素</li>
+<li>无序列表会带有自己的样式属性，但在使用时，通常使用CSS</li>
+</ul>
+</li>
+<li><p>有序列表</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>A: 1000<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>B: 2000<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>C: 3000<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>&lt;ol&gt;之间只能嵌套&lt;li&gt;，<strong>不允许</strong>嵌套<u>其他标签</u>或者<u>文字</u></li>
+<li>&lt;li&gt;之间相当于一个容器，可以嵌套任何元素</li>
+<li>无序列表会带有自己的样式属性，但在使用时，通常使用CSS</li>
+</ol>
+</li>
+<li><p>自定义列表</p>
+<blockquote>
+<p>使用场景：常用于对术语或名词进行解释和描述，定义列表的列表项前没有任何项目符号</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>数字<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>数字1<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>数字2<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>数字3<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>&lt;dl&gt;标签之间只能包含&lt;dt&gt;和&lt;dd&gt;</li>
+<li>&lt;dt&gt;和&lt;dd&gt;个数没有限制，经常一个&lt;dt&gt;包含多个&lt;dd&gt;</li>
+</ol>
+</li>
+</ul>
+<h4 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h4><p><strong>表单的组成：</strong>表单域、表单控件（表单元素）、提示信息</p>
+<ol>
+<li><p>表单域：一个包含表单元素的区域</p>
+<p>&lt;form&gt;标签用于定义表单域，以实现用户信息的收集和传递</p>
+<blockquote>
+<p>&lt;form&gt;会把它<strong>范围内</strong>的表单元素信息提交给服务器</p>
+</blockquote>
+<p>常用属性</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">属性值</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">action</td>
+<td align="center">url地址</td>
+<td align="center">用于指定接收并处理表单数据的服务器程序的url地址</td>
+</tr>
+<tr>
+<td align="center">method</td>
+<td align="center">get&#x2F;post</td>
+<td align="center">用于设置表单数据的提交方式，其取值为get或者post</td>
+</tr>
+<tr>
+<td align="center">name</td>
+<td align="center">名称</td>
+<td align="center">用于指定表单的名称，以区分一个页面中的多个表单域</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>表单控件（表单元素）</p>
+<ul>
+<li><p>Input输入表单元素</p>
+<p>&lt;input&gt;标签用于收集用户信息，单标签</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot; &quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/202310111826824.png" alt="image-20231011175539883"></p>
+<blockquote>
+<p>单选&#x2F;复选框中的name属性要一致，才可以实现多选一&#x2F;多选 </p>
+</blockquote>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/WMGray/blog.images/master/images/202310111826490.png" alt="image-20231011182438214"></p>
+<ul>
+<li><code>name</code>和<code>value</code>是每个表单元素都有的属性值，主要给后台人员使用</li>
+<li><code>name</code>是表单元素的名字，要求<strong>单选按钮和复选框都要有相同的name值</strong></li>
+<li><u>单选按钮</u>和<u>复选框</u>有<code>checked</code>属性，当页面打开时，默认选中这个按钮</li>
+<li><code>maxlength</code>是用户可以在表单元素输入时设置的最大字符数，一般较少使用</li>
+</ul>
+</li>
+<li><p><strong>&lt;label&gt;标签</strong></p>
+<p>&lt;labe&gt;标签用于绑定一个表单元素， 当点击&lt;label&gt;标签内的文本时，浏览器就会自动将点(光标转到或者选择对应的表单元素上用来增加用户体验</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;sex1&quot;</span>&gt;</span>男：<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">id</span>=<span class="string">&quot;sex1&quot;</span> <span class="attr">value</span>=<span class="string">&quot;男&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;sex2&quot;</span>&gt;</span>女：<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">id</span>=<span class="string">&quot;sex2&quot;</span> <span class="attr">value</span>=<span class="string">&quot;女&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>&lt;label&gt;标签的 for 属性应当与相关元素的id 属性相同</strong></p>
+</li>
+<li><p><strong>&lt;select&gt;表单元素</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>天津<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>山东<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>&lt;select&gt;之间至少包含一对&lt;option&gt;</p>
+<p>在&lt;option&gt;中定义selected &#x3D;“selected”时，当前项即为默认选中项</p>
+</blockquote>
+</li>
+<li><p><strong>&lt;textarea&gt;文本域表单元素</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/05/455b73144eaa.html">Hello World</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/">分类</a><a href="/">标签</a><a href="/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/">开源库</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/">关于本站</a><a href="/">GitHub</a></div></div><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
