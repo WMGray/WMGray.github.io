@@ -7,4 +7,6 @@ public/
 .deploy*/
 _multiconfig.yml
 .obsidian/
-./source/_posts/论文/
+source/_posts/论文/
+source/_posts/杂谈/Pyqt Designer.md
+source/_posts/杂谈/Cloudflare 反代.md
