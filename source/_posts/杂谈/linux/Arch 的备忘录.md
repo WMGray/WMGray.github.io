@@ -24,7 +24,7 @@ cover:
 [Miniconda — Anaconda documentation](https://docs.anaconda.com/free/miniconda/index.html)
 
 1. 安装 
-{% tag color: warning 从官网下载的 [Miniconda3 Linux-aarch64 64-bit](https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh) 会报错 %}
+{% tag color:warning 从官网下载的 [Miniconda3 Linux-aarch64 64-bit](https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh) 会报错 %}
 参考: [Illegal Instruction error when verifying Anaconda/Miniconda Install - Stack Overflow](https://stackoverflow.com/questions/68213186/illegal-instruction-error-when-verifying-anaconda-miniconda-install)
 选择下载 [py39_4.92](https://repo.anaconda.com/miniconda/Miniconda3-py39_4.9.2-Linux-aarch64.sh)
 ```
@@ -33,7 +33,7 @@ sudo bash ./Miniconda3-py39_4.9.2-Linux-aarch64.sh
 ```
 一路 enter 下去即可，这里选择的安装地址是 `/opt/miniconda3`
 1. 配置
-{% mark color: blue Bash %}
+{% mark color:blue Bash %}
 
 ```
 # 在/home/xxx/.bashrc 文件中添加
@@ -56,7 +56,7 @@ unset __conda_setup
 source .bashrc
 ```
 
-{% mark color: blue Fish %}
+{% mark color:blue Fish %}
 
 ```
 # Bash shell
